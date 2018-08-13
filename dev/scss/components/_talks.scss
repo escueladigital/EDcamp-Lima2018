@@ -1,0 +1,84 @@
+.talk {
+  display : flex;
+  position : relative;
+  &__speaker {
+    flex: none;
+    margin-right : 1rem;
+    width: 30%;
+  }
+
+  .user {
+    margin-bottom : 0;
+  }
+
+  p {
+    margin-bottom : 0;
+  }
+}
+
+@mixin talk-break($color,$image) {
+  background : linear-gradient(rgba($color,.9), rgba($color,.9)),img(talk-break-#{$image},jpg) center / cover;
+}
+
+.talk-break {
+  @include talk-break($firstColor,presentacion);
+  padding : 2rem;
+  border-radius : .25rem;
+  text-align : right;
+  color: #fff;
+  font-size: fontSize(title3);
+  font-weight : bold;
+  font-family : $heading-font;
+  position : relative;
+
+  &.second {
+    @include talk-break($secondColor,coffe-break);
+  }
+
+  &.third {
+    @include talk-break($thirdColor,premiacion);
+  }
+}
+
+.talk__hour {
+  position : absolute;
+  font-size: fontSize(smaller);
+  color: $thirdColor;
+  font-family : $body-font;
+  font-weight : 700;
+  top : 50%;
+  transform: translateY(-50%);
+  left : -6rem;
+
+  &::after {
+    content: "";
+    display: block;
+    position : absolute;
+    width: .6rem;
+    height : .6rem;
+    border : 1px solid;
+    background: #e7f9ff;
+    border-radius : 50%;
+    right : -1.4rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+// lineas
+
+.talk, .talk-break {
+  &::before {
+    content: '';
+    width: 1px;
+    background : $thirdColor;
+    height : calc(100% + 4rem);
+    position : absolute;
+    left : -2rem;
+    top: 50%;
+  }
+
+  &:last-child::before {
+    display : none;
+  }
+}

@@ -56,3 +56,20 @@
     width: 1200px
   }
 }
+
+// banner
+.main-banner--third {
+  --color: var(--third-color);
+}
+
+.main-banner--dark {
+  --color: var(--dark-color);
+}
+
+
+.subtitle.l-block {
+  margin-bottom : 1rem;
+  @include from(l){
+    margin-bottom : 2rem;
+  }
+}
