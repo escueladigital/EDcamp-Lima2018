@@ -15,6 +15,8 @@
     "browser-sync": "^2.24.6",
     "browserify": "^16.2.2",
     "cssnano": "^4.0.5",
+    "ed-grid": "^2.5.10",
+    "edteam-style-guides": "0.0.20",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.1",
     "gulp-imagemin": "^4.1.0",

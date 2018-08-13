@@ -1,6 +1,9 @@
 /*
   This boilerplate is based in ITCSS and SMACSS
 */
+// La guia de estilos ya trae como dependencia a ed-grid
+$max-width: 1200px;
+@import "../../node_modules/edteam-style-guides/edteam-style-guides";
 
 // Config
 @import "config/functions";
@@ -19,9 +22,14 @@
   // Crea los archivos adicionales que necesites (uno por componente)
 @import "components/buttons";
 @import "components/menus";
+@import "components/users";
+@import "components/subscription-card";
+@import "components/edcamp-features";
+@import "components/social-buttons";
 
 // Theme (colors and fonts)
 @import "theme/typography";
+@import "theme/theme";
 
 // Utilities (hacks)
   // Todos los hacks que hayas necesitado para solucionar conflictos

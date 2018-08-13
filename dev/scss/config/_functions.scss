@@ -1,0 +1,3 @@
+@function img($img,$ext) {
+  @return url(../img/#{$img}.#{$ext})
+}

@@ -1,9 +1,100 @@
 extends ../config/template
 append config
-  -pageTitle = 'Home'
+  -pageTitle = 'EDcamp Lima 2018'
   -pageDescription = 'Pagina inicial de EDboilerplate'
   -pageImage = 'https://ed.team/sites/default/files/EDboilerplate-logo.png'
 
 block main
-  include ../includes/main-menu
-  include:markdown-it(html) md/bienvenidos.md
+  +banner('first','banner-home.jpg','Tecnología, networking y emprendimiento en Lima', 'EDcamp Lima 2018 el 31 de agosto y 1ro de setiembre')
+
+  p.l-50.to-center.center.l-section El EDcamp es el evento internacional de tecnología de EDteam. Dos días para compartir conocimientos, experiencias y crecer profesionalmente. Dos días para compartir conocimientos, experiencias y crecer profesionalmente.
+
+  section.l-section.diagonal-section
+    .ed-grid.cols-l-2.diagonal-section__content
+      h2.t1.center.span-l-2.section-title Eventos
+      .card
+        .card__img
+          img(src="img/tde.jpg" alt="Poster del taller de Emprendimiento")
+        .card__content
+          .card__title Taller de emprendimiento
+          .card__subtitle Viernes 31 de agosto (2pm - 8pm)
+          .card__body 
+            p Aprende a crear un modelo de negocio escalable con las estrategias que usa EDteam. Crea tu propia propuesta de valor.
+          .card__footer
+            p.location Museo de Historia Natural UNMSM, Jesús María
+            a(href="/dia-1.html").button--ghost--alert.button--tiny Más información
+      .card
+        .card__img
+          img(src="img/workshops.jpg" alt="Poster del taller de Emprendimiento")
+        .card__content
+          .card__title Workshops
+          .card__subtitle Sábado 1 de setiembre (9am - 7pm)
+          .card__body 
+            p Talleres de programación, diseño web, emprendimiento y finanzas con el equipo de EDteam
+          .card__footer
+            p.location Edificio empresarial El Almirante, Lince.
+            a(href="/dia-2.html").button--ghost--alert.button--tiny Más información
+
+  section.l-section
+    .ed-grid.cols-l-4
+      h2.t1.center.span-l-4.section-title Expositores
+      // div vacio ocupa una columna
+      div
+      div.home-users
+        +user('Alexys Lozada','alexys.jpg','co', 'Colombia')
+        +user('Beto Quiroga','beto.jpg','bo', 'Bolivia')
+        +user('Jon MirCha','mircha.jpg','mx', 'México')
+      div.home-users
+        +user('Manu Rodriguez','manu.jpg','pe', 'Perú')
+        +user('Freddy Cahuas','freddy.jpg','pe', 'Perú')
+        +user('Álvaro Felipe','alvaro.jpg','pe', 'Perú')
+
+  section.l-section.diagonal-section.left.third
+    .ed-grid.cols-l-2.diagonal-section__content
+      h2.t1.center.span-l-2.section-title Ediciones anteriores
+      .card
+        .card__img
+          img(src="img/lima-2016.jpg" alt="EDcamp Lima 2016")
+        .card__content
+          .card__title EDcamp Lima 2016
+          .card__subtitle Viernes 23 de diciembre
+          .card__body
+            p Nuestro primer EDcamp, cuando aún nos llamábamos Escuela Digital y con nuestro equipo participando por streaming.
+          .card__footer
+            p.location Casa Museo Raúl Porras Barrenechea
+            a(href="/dia-1.html").button--ghost--alert.button--tiny Más información
+      .card
+        .card__img
+          img(src="img/bogota-2017.jpg" alt="EDcamp Bogotá 2017")
+        .card__content
+          .card__title EDcamp Bogotá 2017
+          .card__subtitle Viernes 21 y sábado 22 de julio
+          .card__body
+            p Nuestro primer EDcamp internacional, nos subimos a un avión y nos encontramos con nuestra comunidad en Bogotá.
+          .card__footer
+            p.location Escuela de Ingeniería Julio Garavito
+            a(href="/dia-2.html").button--ghost--alert.button--tiny Más información
+
+  section.l-section
+    .ed-grid.cols-l-12
+      h2.t1.center.span-l-12.section-title Inscripciones
+      div
+      .span-l-5.l-block
+        +suscriptionCard('tde', 'Taller de emprendimiento', 'Viernes 31 de agosto (2pm - 8pm)', '50', '* Becas de EDteam para los ganadores','first','https://ed.team')
+      .span-l-5.l-block
+        +suscriptionCard('workshops', 'Workshops', 'Sábado 1 de setiembre (9am - 7pm)', '300', '* Acceso gratuito al taller de emprendimiento', 'cta', 'https://ed.team')
+      div
+      .span-l-12.center
+        h3 Tu inscripción incluye
+        ul.edcamp-features
+          li Certificado (ambos días)
+          li Coffe break (ambos días)
+          li Polo de EDteam (ambos días)
+          li Libreta y lapicero de EDteam (ambos días)
+          li Stickers, pines y llaveros (ambos días)
+          li Sorteo de mouse Razer Mamba Tournament Edition (viernes 31)
+          li Sorteo de teclado gamer Poseidon Z RGB (viernes 31)
+          li Sorteo de mouse logitech G900 Chaos Spectrum (sábado 1)
+          li Sorteo de teclado Logitech G810 Orion Spectrum (sábado 1)
+
+

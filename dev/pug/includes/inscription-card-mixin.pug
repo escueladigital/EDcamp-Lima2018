@@ -1,0 +1,10 @@
+mixin suscriptionCard(image,title,subtitle,price,message,button,link)
+  .card.card--mini-horizontal.card--subscription
+    .card__img
+      img(src="img/card__img-"+image+".jpg")
+    .card__content
+      .card__title= title
+      .card__subtitle=subtitle
+      a(class="button--"+button href=link)="S/ " +price
+  span.smaller=message
+

@@ -88,7 +88,7 @@ gulp.task('scripts', () =>
 )
 
 gulp.task('images', () => {
-  gulp.src('./dev/img/**')
+  gulp.src('./dev/img/**/**')
    .pipe(imagemin([
     imagemin.gifsicle({interlaced: true}),
     imagemin.jpegtran({progressive: true}),
@@ -108,5 +108,5 @@ gulp.task('default', ['styles', 'pug', 'images','scripts'], () => {
   watch('./dev/scss/**/**', () => gulp.start('styles'))
   watch('./dev/js/**/**', () => gulp.start('scripts',server.reload) )
   watch('./dev/pug/**/**', () => gulp.start('pug', server.reload))
-  watch('./dev/img/**', () => gulp.start('images'))
+  watch('./dev/img/**/**', () => gulp.start('images'))
 });

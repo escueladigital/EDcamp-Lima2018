@@ -1,0 +1,39 @@
+.card--subscription {
+  .card__title {
+    font-family : $body-font;
+  }
+  .card__img {
+    width : 138px;
+    flex: none;
+
+    img {
+      display : block;
+    }
+  }
+
+  .card__content {
+    align-items: flex-start;
+  }
+
+  [class*=button] {
+    display : inline-flex;
+    font-size : fontSize(title3);
+    padding : .4rem 1rem;
+    align-items: center;
+
+    &::before {
+      content: "";
+      display : inline-block;
+      width: 2rem;
+      height : 1.5rem;
+      background: url(../img/ticket.svg) no-repeat center / contain;
+      margin-right : .25rem;
+    }
+  }
+
+  + span {
+    padding-top : .5rem;
+    display : block;
+
+  }
+}
