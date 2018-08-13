@@ -1,0 +1,9 @@
+extends ../config/template
+append config
+  -pageTitle = 'Home'
+  -pageDescription = 'Pagina inicial de EDboilerplate'
+  -pageImage = 'https://ed.team/sites/default/files/EDboilerplate-logo.png'
+
+block main
+  include ../includes/main-menu
+  include:markdown-it(html) md/bienvenidos.md
