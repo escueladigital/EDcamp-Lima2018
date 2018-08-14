@@ -2,6 +2,10 @@
   display : flex;
   justify-content: flex-end;
 
+  @include to(l) {
+    justify-content: center;
+  }
+
   a {
     display : block;
     width: 1.6rem;

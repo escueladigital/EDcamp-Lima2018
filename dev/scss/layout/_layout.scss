@@ -3,3 +3,27 @@
         height: 4rem;
     }
 }
+
+.main-header + .l-section {
+  @include to(l) {
+    margin-top : 3rem;
+  }
+}
+
+
+.main-footer {
+  @include to(l) {
+    text-align : center;
+
+    span {
+      margin-bottom : 1rem;
+    }
+  }
+}
+
+
+@include to(l) {
+  .l-section {
+    margin-bottom : 2rem;
+  }
+}

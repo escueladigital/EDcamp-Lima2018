@@ -1,0 +1,4573 @@
+@charset "UTF-8";
+/*
+  This boilerplate is based in ITCSS and SMACSS
+*/
+/*
+  This boilerplate is based in ITCSS and SMACSS
+*/
+/* line 9, node_modules/edteam-style-guides/dev/scss/config/_variables.scss */
+:root {
+  --header-height: 3rem;
+  --max-width: 1344px;
+  --gutter: 1rem;
+}
+
+/* line 22, node_modules/edteam-style-guides/dev/scss/config/_variables.scss */
+:root {
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/* line 16, node_modules/edteam-style-guides/dev/scss/config/_color.scss */
+:root {
+  --first-color: #007BDF;
+  --first-color-alt: #006DC6;
+  --second-color: #00CBFF;
+  --second-color-alt: #00BFF0;
+  --third-color: #FF3C32;
+  --third-color-alt: #FF2419;
+  --accent-color: #FBA905;
+  --accent-color-alt: #F1A000;
+  --dark-color: #282D31;
+  --dark-color-alt: #141618;
+  --border-color: #DFE0E0;
+  --text-color: #53575A;
+  --body-bg: #FCFCFC;
+}
+
+/* line 33, node_modules/edteam-style-guides/dev/scss/config/_color.scss */
+.first-color {
+  --color: var(--first-color);
+  --color-alt: var(--accent-color);
+}
+
+/* line 37, node_modules/edteam-style-guides/dev/scss/config/_color.scss */
+.second-color {
+  --color: var(--second-color);
+  --color-alt: var(--third-color);
+}
+
+/* line 41, node_modules/edteam-style-guides/dev/scss/config/_color.scss */
+.third-color {
+  --color: var(--third-color);
+  --color-alt: var(--accent-color);
+}
+
+/* line 45, node_modules/edteam-style-guides/dev/scss/config/_color.scss */
+.accent-color {
+  --color: var(--accent-color);
+  --color-alt: var(--third-color);
+}
+
+/* line 49, node_modules/edteam-style-guides/dev/scss/config/_color.scss */
+.dark-color {
+  --color: var(--dark-color);
+  --color-alt: var(--accent-color);
+}
+
+/**
+  EDgrid es una librería CSS para construir layouts con Responsive Web Design
+  Importe este archivo en su proyecto para empezar a usarlo
+**/
+/* line 2, node_modules/ed-grid/components/_base.scss */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* line 8, node_modules/ed-grid/components/_base.scss */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* line 14, node_modules/ed-grid/components/_base.scss */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 19, node_modules/ed-grid/components/_base.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 22, node_modules/ed-grid/components/_base.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 2, node_modules/ed-grid/components/_core.scss */
+.ed-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1344px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* line 12, node_modules/ed-grid/components/_core.scss */
+.ed-item {
+  margin: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* line 113, node_modules/ed-grid/components/_core.scss */
+.ed-item {
+  width: 100%;
+}
+
+/* line 118, node_modules/ed-grid/components/_core.scss */
+.ed-item.ed-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/*
+| Mixin para crear cuadriculas
+|
+| $gridItemSelector: nombre del selector CSS de cada item de la cuadricula
+| $listColumns:
+|              * lista de numeros de columnas en cada breakpoint (separados por espacios). Ej: 1 2 3 4
+|              * el numero de columnas del ultimo breakpoint se hereda a breakpoints superiores
+| $gutter: separación entre cada item de la cuadricula (opcional)
+|
+*/
+/* line 129, node_modules/ed-grid/components/_core.scss */
+.s-5,
+.ed-item.s-5 {
+  width: 5%;
+}
+
+/* line 129, node_modules/ed-grid/components/_core.scss */
+.s-10,
+.ed-item.s-10 {
+  width: 10%;
+}
+
+/* line 129, node_modules/ed-grid/components/_core.scss */
+.s-15,
+.ed-item.s-15 {
+  width: 15%;
+}
+
+/* line 129, node_modules/ed-grid/components/_core.scss */
+.s-20,
+.ed-item.s-20 {
+  width: 20%;
+}
+
+/* line 129, node_modules/ed-grid/components/_core.scss */
+.s-25,
+.ed-item.s-25 {
+  width: 25%;
+}
+
+/* line 129, node_modules/ed-grid/components/_core.scss */
+.s-30,
+.ed-item.s-30 {
+  width: 30%;
+}
+
+/* line 129, node_modules/ed-grid/components/_core.scss */
+.s-35,
+.ed-item.s-35 {
+  width: 35%;
+}
+
+/* line 129, node_modules/ed-grid/components/_core.scss */
+.s-40,
+.ed-item.s-40 {
+  width: 40%;
+}
+
+/* line 129, node_modules/ed-grid/components/_core.scss */
+.s-45,
+.ed-item.s-45 {
+  width: 45%;
+}
+
+/* line 129, node_modules/ed-grid/components/_core.scss */
+.s-50,
+.ed-item.s-50 {
+  width: 50%;
+}
+
+/* line 129, node_modules/ed-grid/components/_core.scss */
+.s-55,
+.ed-item.s-55 {
+  width: 55%;
+}
+
+/* line 129, node_modules/ed-grid/components/_core.scss */
+.s-60,
+.ed-item.s-60 {
+  width: 60%;
+}
+
+/* line 129, node_modules/ed-grid/components/_core.scss */
+.s-65,
+.ed-item.s-65 {
+  width: 65%;
+}
+
+/* line 129, node_modules/ed-grid/components/_core.scss */
+.s-70,
+.ed-item.s-70 {
+  width: 70%;
+}
+
+/* line 129, node_modules/ed-grid/components/_core.scss */
+.s-75,
+.ed-item.s-75 {
+  width: 75%;
+}
+
+/* line 129, node_modules/ed-grid/components/_core.scss */
+.s-80,
+.ed-item.s-80 {
+  width: 80%;
+}
+
+/* line 129, node_modules/ed-grid/components/_core.scss */
+.s-85,
+.ed-item.s-85 {
+  width: 85%;
+}
+
+/* line 129, node_modules/ed-grid/components/_core.scss */
+.s-90,
+.ed-item.s-90 {
+  width: 90%;
+}
+
+/* line 129, node_modules/ed-grid/components/_core.scss */
+.s-95,
+.ed-item.s-95 {
+  width: 95%;
+}
+
+/* line 129, node_modules/ed-grid/components/_core.scss */
+.s-100,
+.ed-item.s-100 {
+  width: 100%;
+}
+
+/* line 136, node_modules/ed-grid/components/_core.scss */
+.s-1-3,
+.ed-item.s-1-3 {
+  width: 33.33333%;
+}
+
+/* line 136, node_modules/ed-grid/components/_core.scss */
+.s-2-3,
+.ed-item.s-2-3 {
+  width: 66.66667%;
+}
+
+/* line 136, node_modules/ed-grid/components/_core.scss */
+.s-3-3,
+.ed-item.s-3-3 {
+  width: 100%;
+}
+
+/* line 136, node_modules/ed-grid/components/_core.scss */
+.s-1-6,
+.ed-item.s-1-6 {
+  width: 16.66667%;
+}
+
+/* line 136, node_modules/ed-grid/components/_core.scss */
+.s-2-6,
+.ed-item.s-2-6 {
+  width: 33.33333%;
+}
+
+/* line 136, node_modules/ed-grid/components/_core.scss */
+.s-3-6,
+.ed-item.s-3-6 {
+  width: 50%;
+}
+
+/* line 136, node_modules/ed-grid/components/_core.scss */
+.s-4-6,
+.ed-item.s-4-6 {
+  width: 66.66667%;
+}
+
+/* line 136, node_modules/ed-grid/components/_core.scss */
+.s-5-6,
+.ed-item.s-5-6 {
+  width: 83.33333%;
+}
+
+/* line 136, node_modules/ed-grid/components/_core.scss */
+.s-6-6,
+.ed-item.s-6-6 {
+  width: 100%;
+}
+
+@media all and (min-width: 640px) {
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .m-5,
+  .ed-item.m-5 {
+    width: 5%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .m-10,
+  .ed-item.m-10 {
+    width: 10%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .m-15,
+  .ed-item.m-15 {
+    width: 15%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .m-20,
+  .ed-item.m-20 {
+    width: 20%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .m-25,
+  .ed-item.m-25 {
+    width: 25%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .m-30,
+  .ed-item.m-30 {
+    width: 30%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .m-35,
+  .ed-item.m-35 {
+    width: 35%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .m-40,
+  .ed-item.m-40 {
+    width: 40%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .m-45,
+  .ed-item.m-45 {
+    width: 45%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .m-50,
+  .ed-item.m-50 {
+    width: 50%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .m-55,
+  .ed-item.m-55 {
+    width: 55%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .m-60,
+  .ed-item.m-60 {
+    width: 60%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .m-65,
+  .ed-item.m-65 {
+    width: 65%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .m-70,
+  .ed-item.m-70 {
+    width: 70%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .m-75,
+  .ed-item.m-75 {
+    width: 75%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .m-80,
+  .ed-item.m-80 {
+    width: 80%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .m-85,
+  .ed-item.m-85 {
+    width: 85%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .m-90,
+  .ed-item.m-90 {
+    width: 90%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .m-95,
+  .ed-item.m-95 {
+    width: 95%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .m-100,
+  .ed-item.m-100 {
+    width: 100%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .m-1-3,
+  .ed-item.m-1-3 {
+    width: 33.33333%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .m-2-3,
+  .ed-item.m-2-3 {
+    width: 66.66667%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .m-3-3,
+  .ed-item.m-3-3 {
+    width: 100%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .m-1-6,
+  .ed-item.m-1-6 {
+    width: 16.66667%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .m-2-6,
+  .ed-item.m-2-6 {
+    width: 33.33333%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .m-3-6,
+  .ed-item.m-3-6 {
+    width: 50%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .m-4-6,
+  .ed-item.m-4-6 {
+    width: 66.66667%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .m-5-6,
+  .ed-item.m-5-6 {
+    width: 83.33333%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .m-6-6,
+  .ed-item.m-6-6 {
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .l-5,
+  .ed-item.l-5 {
+    width: 5%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .l-10,
+  .ed-item.l-10 {
+    width: 10%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .l-15,
+  .ed-item.l-15 {
+    width: 15%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .l-20,
+  .ed-item.l-20 {
+    width: 20%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .l-25,
+  .ed-item.l-25 {
+    width: 25%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .l-30,
+  .ed-item.l-30 {
+    width: 30%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .l-35,
+  .ed-item.l-35 {
+    width: 35%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .l-40,
+  .ed-item.l-40 {
+    width: 40%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .l-45,
+  .ed-item.l-45 {
+    width: 45%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .l-50,
+  .ed-item.l-50 {
+    width: 50%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .l-55,
+  .ed-item.l-55 {
+    width: 55%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .l-60,
+  .ed-item.l-60 {
+    width: 60%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .l-65,
+  .ed-item.l-65 {
+    width: 65%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .l-70,
+  .ed-item.l-70 {
+    width: 70%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .l-75,
+  .ed-item.l-75 {
+    width: 75%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .l-80,
+  .ed-item.l-80 {
+    width: 80%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .l-85,
+  .ed-item.l-85 {
+    width: 85%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .l-90,
+  .ed-item.l-90 {
+    width: 90%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .l-95,
+  .ed-item.l-95 {
+    width: 95%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .l-100,
+  .ed-item.l-100 {
+    width: 100%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .l-1-3,
+  .ed-item.l-1-3 {
+    width: 33.33333%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .l-2-3,
+  .ed-item.l-2-3 {
+    width: 66.66667%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .l-3-3,
+  .ed-item.l-3-3 {
+    width: 100%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .l-1-6,
+  .ed-item.l-1-6 {
+    width: 16.66667%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .l-2-6,
+  .ed-item.l-2-6 {
+    width: 33.33333%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .l-3-6,
+  .ed-item.l-3-6 {
+    width: 50%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .l-4-6,
+  .ed-item.l-4-6 {
+    width: 66.66667%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .l-5-6,
+  .ed-item.l-5-6 {
+    width: 83.33333%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .l-6-6,
+  .ed-item.l-6-6 {
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .xl-5,
+  .ed-item.xl-5 {
+    width: 5%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .xl-10,
+  .ed-item.xl-10 {
+    width: 10%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .xl-15,
+  .ed-item.xl-15 {
+    width: 15%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .xl-20,
+  .ed-item.xl-20 {
+    width: 20%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .xl-25,
+  .ed-item.xl-25 {
+    width: 25%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .xl-30,
+  .ed-item.xl-30 {
+    width: 30%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .xl-35,
+  .ed-item.xl-35 {
+    width: 35%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .xl-40,
+  .ed-item.xl-40 {
+    width: 40%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .xl-45,
+  .ed-item.xl-45 {
+    width: 45%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .xl-50,
+  .ed-item.xl-50 {
+    width: 50%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .xl-55,
+  .ed-item.xl-55 {
+    width: 55%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .xl-60,
+  .ed-item.xl-60 {
+    width: 60%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .xl-65,
+  .ed-item.xl-65 {
+    width: 65%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .xl-70,
+  .ed-item.xl-70 {
+    width: 70%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .xl-75,
+  .ed-item.xl-75 {
+    width: 75%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .xl-80,
+  .ed-item.xl-80 {
+    width: 80%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .xl-85,
+  .ed-item.xl-85 {
+    width: 85%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .xl-90,
+  .ed-item.xl-90 {
+    width: 90%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .xl-95,
+  .ed-item.xl-95 {
+    width: 95%;
+  }
+  /* line 145, node_modules/ed-grid/components/_core.scss */
+  .xl-100,
+  .ed-item.xl-100 {
+    width: 100%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .xl-1-3,
+  .ed-item.xl-1-3 {
+    width: 33.33333%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .xl-2-3,
+  .ed-item.xl-2-3 {
+    width: 66.66667%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .xl-3-3,
+  .ed-item.xl-3-3 {
+    width: 100%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .xl-1-6,
+  .ed-item.xl-1-6 {
+    width: 16.66667%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .xl-2-6,
+  .ed-item.xl-2-6 {
+    width: 33.33333%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .xl-3-6,
+  .ed-item.xl-3-6 {
+    width: 50%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .xl-4-6,
+  .ed-item.xl-4-6 {
+    width: 66.66667%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .xl-5-6,
+  .ed-item.xl-5-6 {
+    width: 83.33333%;
+  }
+  /* line 152, node_modules/ed-grid/components/_core.scss */
+  .xl-6-6,
+  .ed-item.xl-6-6 {
+    width: 100%;
+  }
+}
+
+/* line 152, node_modules/ed-grid/components/_helpers.scss */
+.to-center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* line 157, node_modules/ed-grid/components/_helpers.scss */
+.to-center.ed-container {
+  display: flex;
+}
+
+/* line 161, node_modules/ed-grid/components/_helpers.scss */
+.to-left {
+  float: left;
+  width: auto;
+  margin-right: 1em;
+}
+
+/* line 162, node_modules/ed-grid/components/_helpers.scss */
+.to-right {
+  float: right;
+  width: auto;
+  margin-left: 1em;
+}
+
+/* line 163, node_modules/ed-grid/components/_helpers.scss */
+.full {
+  max-width: 100%;
+}
+
+/* line 164, node_modules/ed-grid/components/_helpers.scss */
+.circle {
+  border-radius: 50%;
+}
+
+/* line 42, node_modules/ed-grid/components/_helpers.scss */
+.clearfix:before, .clearfix:after {
+  content: "";
+  width: 100%;
+  display: table;
+  clear: both;
+}
+
+/* line 19, node_modules/ed-grid/components/_helpers.scss */
+.no-padding.ed-container > .ed-item {
+  padding-left: 0rem;
+  padding-right: 0rem;
+}
+
+/* line 167, node_modules/ed-grid/components/_helpers.scss */
+.no-padding.ed-item {
+  padding-left: 0rem;
+  padding-right: 0rem;
+}
+
+/* line 168, node_modules/ed-grid/components/_helpers.scss */
+.padding {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* line 169, node_modules/ed-grid/components/_helpers.scss */
+.padding-2 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* line 170, node_modules/ed-grid/components/_helpers.scss */
+.padding-3 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+/* line 171, node_modules/ed-grid/components/_helpers.scss */
+body.sticky-footer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* line 147, node_modules/ed-grid/components/_helpers.scss */
+body.sticky-footer > footer {
+  margin-top: auto;
+}
+
+/* line 312, node_modules/ed-grid/components/_flexbox.scss */
+.main-justify {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* line 313, node_modules/ed-grid/components/_flexbox.scss */
+.main-distribute {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* line 314, node_modules/ed-grid/components/_flexbox.scss */
+.main-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* line 315, node_modules/ed-grid/components/_flexbox.scss */
+.main-start {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+/* line 316, node_modules/ed-grid/components/_flexbox.scss */
+.main-end {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* line 317, node_modules/ed-grid/components/_flexbox.scss */
+.cross-start {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+/* line 318, node_modules/ed-grid/components/_flexbox.scss */
+.cross-center {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}
+
+/* line 319, node_modules/ed-grid/components/_flexbox.scss */
+.cross-end {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  align-content: flex-end;
+}
+
+/* line 320, node_modules/ed-grid/components/_flexbox.scss */
+.flex-reverse {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+
+/* line 321, node_modules/ed-grid/components/_flexbox.scss */
+.flex-column {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+/* line 322, node_modules/ed-grid/components/_flexbox.scss */
+.flex-column-reverse {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+}
+
+/* line 323, node_modules/ed-grid/components/_flexbox.scss */
+.abcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* line 60, node_modules/ed-grid/components/_visibility.scss */
+.from-s {
+  display: none;
+}
+
+/* line 61, node_modules/ed-grid/components/_visibility.scss */
+.to-s {
+  display: none;
+}
+
+@media screen and (max-width: 639px) {
+  /* line 60, node_modules/ed-grid/components/_visibility.scss */
+  .from-m {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  /* line 61, node_modules/ed-grid/components/_visibility.scss */
+  .to-m {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 60, node_modules/ed-grid/components/_visibility.scss */
+  .from-l {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 61, node_modules/ed-grid/components/_visibility.scss */
+  .to-l {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  /* line 60, node_modules/ed-grid/components/_visibility.scss */
+  .from-xl {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  /* line 61, node_modules/ed-grid/components/_visibility.scss */
+  .to-xl {
+    display: none;
+  }
+}
+
+/* line 7, node_modules/ed-grid/components/_css-helpers.scss */
+.ed-video {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+/* line 26, node_modules/ed-grid/components/_video.scss */
+.ed-video > iframe,
+.ed-video > video,
+.ed-video > .video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 13, node_modules/ed-grid/components/_css-helpers.scss */
+.button {
+  display: inline-block;
+  padding: .6em 1.2em;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  background: #eee;
+  color: #333;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* line 12, node_modules/ed-grid/components/_buttons.scss */
+.button:hover {
+  background: #ddd;
+}
+
+/* line 16, node_modules/ed-grid/components/_css-helpers.scss */
+.button.radius {
+  border-radius: .25rem;
+}
+
+/* line 20, node_modules/ed-grid/components/_css-helpers.scss */
+.button.round {
+  border-radius: 2em;
+}
+
+/* line 24, node_modules/ed-grid/components/_css-helpers.scss */
+.button:last-of-type {
+  margin-right: 0;
+}
+
+/* line 4, node_modules/ed-grid/components/_grid-v3.scss */
+:root {
+  --gap: 1rem
+;
+}
+
+/* line 14, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid {
+  display: grid;
+  grid-column-gap: 2rem;
+  width: calc(100vw - var(--gap) * 2);
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media screen and (min-width: 1344px) {
+  /* line 14, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid {
+    width: 1344px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* line 32, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid .ed-grid, .ed-grid.full {
+  width: 100%;
+  max-width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* line 44, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid.cols-s-2 {
+  grid-template-columns: repeat(2, calc((100% - 2rem) / 2));
+}
+
+/* line 44, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid.cols-s-3 {
+  grid-template-columns: repeat(3, calc((100% - 4rem) / 3));
+}
+
+/* line 44, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid.cols-s-4 {
+  grid-template-columns: repeat(4, calc((100% - 6rem) / 4));
+}
+
+/* line 44, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid.cols-s-5 {
+  grid-template-columns: repeat(5, calc((100% - 8rem) / 5));
+}
+
+/* line 44, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid.cols-s-6 {
+  grid-template-columns: repeat(6, calc((100% - 10rem) / 6));
+}
+
+/* line 44, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid.cols-s-7 {
+  grid-template-columns: repeat(7, calc((100% - 12rem) / 7));
+}
+
+/* line 44, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid.cols-s-8 {
+  grid-template-columns: repeat(8, calc((100% - 14rem) / 8));
+}
+
+/* line 44, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid.cols-s-9 {
+  grid-template-columns: repeat(9, calc((100% - 16rem) / 9));
+}
+
+/* line 44, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid.cols-s-10 {
+  grid-template-columns: repeat(10, calc((100% - 18rem) / 10));
+}
+
+/* line 44, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid.cols-s-11 {
+  grid-template-columns: repeat(11, calc((100% - 20rem) / 11));
+}
+
+/* line 44, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid.cols-s-12 {
+  grid-template-columns: repeat(12, calc((100% - 22rem) / 12));
+}
+
+/* line 44, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid.cols-s-13 {
+  grid-template-columns: repeat(13, calc((100% - 24rem) / 13));
+}
+
+/* line 44, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid.cols-s-14 {
+  grid-template-columns: repeat(14, calc((100% - 26rem) / 14));
+}
+
+/* line 44, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid.cols-s-15 {
+  grid-template-columns: repeat(15, calc((100% - 28rem) / 15));
+}
+
+/* line 44, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid.cols-s-16 {
+  grid-template-columns: repeat(16, calc((100% - 30rem) / 16));
+}
+
+/* line 44, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid.cols-s-17 {
+  grid-template-columns: repeat(17, calc((100% - 32rem) / 17));
+}
+
+/* line 44, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid.cols-s-18 {
+  grid-template-columns: repeat(18, calc((100% - 34rem) / 18));
+}
+
+/* line 44, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid.cols-s-19 {
+  grid-template-columns: repeat(19, calc((100% - 36rem) / 19));
+}
+
+/* line 44, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid.cols-s-20 {
+  grid-template-columns: repeat(20, calc((100% - 38rem) / 20));
+}
+
+/* line 63, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid > .span-s-1 {
+  grid-column: span 1;
+}
+
+/* line 63, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid > .span-s-2 {
+  grid-column: span 2;
+}
+
+/* line 63, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid > .span-s-3 {
+  grid-column: span 3;
+}
+
+/* line 63, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid > .span-s-4 {
+  grid-column: span 4;
+}
+
+/* line 63, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid > .span-s-5 {
+  grid-column: span 5;
+}
+
+/* line 63, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid > .span-s-6 {
+  grid-column: span 6;
+}
+
+/* line 63, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid > .span-s-7 {
+  grid-column: span 7;
+}
+
+/* line 63, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid > .span-s-8 {
+  grid-column: span 8;
+}
+
+/* line 63, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid > .span-s-9 {
+  grid-column: span 9;
+}
+
+/* line 63, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid > .span-s-10 {
+  grid-column: span 10;
+}
+
+/* line 63, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid > .span-s-11 {
+  grid-column: span 11;
+}
+
+/* line 63, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid > .span-s-12 {
+  grid-column: span 12;
+}
+
+/* line 63, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid > .span-s-13 {
+  grid-column: span 13;
+}
+
+/* line 63, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid > .span-s-14 {
+  grid-column: span 14;
+}
+
+/* line 63, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid > .span-s-15 {
+  grid-column: span 15;
+}
+
+/* line 63, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid > .span-s-16 {
+  grid-column: span 16;
+}
+
+/* line 63, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid > .span-s-17 {
+  grid-column: span 17;
+}
+
+/* line 63, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid > .span-s-18 {
+  grid-column: span 18;
+}
+
+/* line 63, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid > .span-s-19 {
+  grid-column: span 19;
+}
+
+/* line 63, node_modules/ed-grid/components/_grid-v3.scss */
+.ed-grid > .span-s-20 {
+  grid-column: span 20;
+}
+
+@media all and (min-width: 640px) {
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-m-2 {
+    grid-template-columns: repeat(2, calc((100% - 2rem) / 2));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-m-3 {
+    grid-template-columns: repeat(3, calc((100% - 4rem) / 3));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-m-4 {
+    grid-template-columns: repeat(4, calc((100% - 6rem) / 4));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-m-5 {
+    grid-template-columns: repeat(5, calc((100% - 8rem) / 5));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-m-6 {
+    grid-template-columns: repeat(6, calc((100% - 10rem) / 6));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-m-7 {
+    grid-template-columns: repeat(7, calc((100% - 12rem) / 7));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-m-8 {
+    grid-template-columns: repeat(8, calc((100% - 14rem) / 8));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-m-9 {
+    grid-template-columns: repeat(9, calc((100% - 16rem) / 9));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-m-10 {
+    grid-template-columns: repeat(10, calc((100% - 18rem) / 10));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-m-11 {
+    grid-template-columns: repeat(11, calc((100% - 20rem) / 11));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-m-12 {
+    grid-template-columns: repeat(12, calc((100% - 22rem) / 12));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-m-13 {
+    grid-template-columns: repeat(13, calc((100% - 24rem) / 13));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-m-14 {
+    grid-template-columns: repeat(14, calc((100% - 26rem) / 14));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-m-15 {
+    grid-template-columns: repeat(15, calc((100% - 28rem) / 15));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-m-16 {
+    grid-template-columns: repeat(16, calc((100% - 30rem) / 16));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-m-17 {
+    grid-template-columns: repeat(17, calc((100% - 32rem) / 17));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-m-18 {
+    grid-template-columns: repeat(18, calc((100% - 34rem) / 18));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-m-19 {
+    grid-template-columns: repeat(19, calc((100% - 36rem) / 19));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-m-20 {
+    grid-template-columns: repeat(20, calc((100% - 38rem) / 20));
+  }
+}
+
+@media all and (min-width: 640px) {
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-m-1 {
+    grid-column: span 1;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-m-2 {
+    grid-column: span 2;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-m-3 {
+    grid-column: span 3;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-m-4 {
+    grid-column: span 4;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-m-5 {
+    grid-column: span 5;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-m-6 {
+    grid-column: span 6;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-m-7 {
+    grid-column: span 7;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-m-8 {
+    grid-column: span 8;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-m-9 {
+    grid-column: span 9;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-m-10 {
+    grid-column: span 10;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-m-11 {
+    grid-column: span 11;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-m-12 {
+    grid-column: span 12;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-m-13 {
+    grid-column: span 13;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-m-14 {
+    grid-column: span 14;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-m-15 {
+    grid-column: span 15;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-m-16 {
+    grid-column: span 16;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-m-17 {
+    grid-column: span 17;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-m-18 {
+    grid-column: span 18;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-m-19 {
+    grid-column: span 19;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-m-20 {
+    grid-column: span 20;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-l-2 {
+    grid-template-columns: repeat(2, calc((100% - 2rem) / 2));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-l-3 {
+    grid-template-columns: repeat(3, calc((100% - 4rem) / 3));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-l-4 {
+    grid-template-columns: repeat(4, calc((100% - 6rem) / 4));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-l-5 {
+    grid-template-columns: repeat(5, calc((100% - 8rem) / 5));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-l-6 {
+    grid-template-columns: repeat(6, calc((100% - 10rem) / 6));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-l-7 {
+    grid-template-columns: repeat(7, calc((100% - 12rem) / 7));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-l-8 {
+    grid-template-columns: repeat(8, calc((100% - 14rem) / 8));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-l-9 {
+    grid-template-columns: repeat(9, calc((100% - 16rem) / 9));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-l-10 {
+    grid-template-columns: repeat(10, calc((100% - 18rem) / 10));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-l-11 {
+    grid-template-columns: repeat(11, calc((100% - 20rem) / 11));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-l-12 {
+    grid-template-columns: repeat(12, calc((100% - 22rem) / 12));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-l-13 {
+    grid-template-columns: repeat(13, calc((100% - 24rem) / 13));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-l-14 {
+    grid-template-columns: repeat(14, calc((100% - 26rem) / 14));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-l-15 {
+    grid-template-columns: repeat(15, calc((100% - 28rem) / 15));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-l-16 {
+    grid-template-columns: repeat(16, calc((100% - 30rem) / 16));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-l-17 {
+    grid-template-columns: repeat(17, calc((100% - 32rem) / 17));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-l-18 {
+    grid-template-columns: repeat(18, calc((100% - 34rem) / 18));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-l-19 {
+    grid-template-columns: repeat(19, calc((100% - 36rem) / 19));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-l-20 {
+    grid-template-columns: repeat(20, calc((100% - 38rem) / 20));
+  }
+}
+
+@media all and (min-width: 1024px) {
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-l-1 {
+    grid-column: span 1;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-l-2 {
+    grid-column: span 2;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-l-3 {
+    grid-column: span 3;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-l-4 {
+    grid-column: span 4;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-l-5 {
+    grid-column: span 5;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-l-6 {
+    grid-column: span 6;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-l-7 {
+    grid-column: span 7;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-l-8 {
+    grid-column: span 8;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-l-9 {
+    grid-column: span 9;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-l-10 {
+    grid-column: span 10;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-l-11 {
+    grid-column: span 11;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-l-12 {
+    grid-column: span 12;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-l-13 {
+    grid-column: span 13;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-l-14 {
+    grid-column: span 14;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-l-15 {
+    grid-column: span 15;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-l-16 {
+    grid-column: span 16;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-l-17 {
+    grid-column: span 17;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-l-18 {
+    grid-column: span 18;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-l-19 {
+    grid-column: span 19;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-l-20 {
+    grid-column: span 20;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-xl-2 {
+    grid-template-columns: repeat(2, calc((100% - 2rem) / 2));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-xl-3 {
+    grid-template-columns: repeat(3, calc((100% - 4rem) / 3));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-xl-4 {
+    grid-template-columns: repeat(4, calc((100% - 6rem) / 4));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-xl-5 {
+    grid-template-columns: repeat(5, calc((100% - 8rem) / 5));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-xl-6 {
+    grid-template-columns: repeat(6, calc((100% - 10rem) / 6));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-xl-7 {
+    grid-template-columns: repeat(7, calc((100% - 12rem) / 7));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-xl-8 {
+    grid-template-columns: repeat(8, calc((100% - 14rem) / 8));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-xl-9 {
+    grid-template-columns: repeat(9, calc((100% - 16rem) / 9));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-xl-10 {
+    grid-template-columns: repeat(10, calc((100% - 18rem) / 10));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-xl-11 {
+    grid-template-columns: repeat(11, calc((100% - 20rem) / 11));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-xl-12 {
+    grid-template-columns: repeat(12, calc((100% - 22rem) / 12));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-xl-13 {
+    grid-template-columns: repeat(13, calc((100% - 24rem) / 13));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-xl-14 {
+    grid-template-columns: repeat(14, calc((100% - 26rem) / 14));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-xl-15 {
+    grid-template-columns: repeat(15, calc((100% - 28rem) / 15));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-xl-16 {
+    grid-template-columns: repeat(16, calc((100% - 30rem) / 16));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-xl-17 {
+    grid-template-columns: repeat(17, calc((100% - 32rem) / 17));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-xl-18 {
+    grid-template-columns: repeat(18, calc((100% - 34rem) / 18));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-xl-19 {
+    grid-template-columns: repeat(19, calc((100% - 36rem) / 19));
+  }
+  /* line 52, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid.cols-xl-20 {
+    grid-template-columns: repeat(20, calc((100% - 38rem) / 20));
+  }
+}
+
+@media all and (min-width: 1440px) {
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-xl-1 {
+    grid-column: span 1;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-xl-2 {
+    grid-column: span 2;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-xl-3 {
+    grid-column: span 3;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-xl-4 {
+    grid-column: span 4;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-xl-5 {
+    grid-column: span 5;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-xl-6 {
+    grid-column: span 6;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-xl-7 {
+    grid-column: span 7;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-xl-8 {
+    grid-column: span 8;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-xl-9 {
+    grid-column: span 9;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-xl-10 {
+    grid-column: span 10;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-xl-11 {
+    grid-column: span 11;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-xl-12 {
+    grid-column: span 12;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-xl-13 {
+    grid-column: span 13;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-xl-14 {
+    grid-column: span 14;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-xl-15 {
+    grid-column: span 15;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-xl-16 {
+    grid-column: span 16;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-xl-17 {
+    grid-column: span 17;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-xl-18 {
+    grid-column: span 18;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-xl-19 {
+    grid-column: span 19;
+  }
+  /* line 70, node_modules/ed-grid/components/_grid-v3.scss */
+  .ed-grid > .span-xl-20 {
+    grid-column: span 20;
+  }
+}
+
+/* line 1, node_modules/ed-grid/components/_layout.scss */
+.l-block {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 1, node_modules/ed-grid/components/_layout.scss */
+  .l-block {
+    margin-bottom: 2rem;
+  }
+}
+
+/* line 10, node_modules/ed-grid/components/_layout.scss */
+.l-section {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 10, node_modules/ed-grid/components/_layout.scss */
+  .l-section {
+    margin-bottom: 4rem;
+  }
+}
+
+/* line 1, node_modules/edteam-style-guides/dev/scss/base/base.scss */
+*,
+*::before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* line 7, node_modules/edteam-style-guides/dev/scss/base/base.scss */
+body {
+  margin: 0;
+  background: #FAFDFF;
+}
+
+/* line 12, node_modules/edteam-style-guides/dev/scss/base/base.scss */
+strong,
+em {
+  font-weight: 700;
+}
+
+/* line 17, node_modules/edteam-style-guides/dev/scss/base/base.scss */
+ul {
+  padding-left: 0;
+  margin-left: 2rem;
+}
+
+/* line 1, node_modules/edteam-style-guides/dev/scss/layout/_layout.scss */
+body {
+  margin: var(--header-height) 0 0 0;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 64px);
+}
+
+/* line 9, node_modules/edteam-style-guides/dev/scss/layout/_layout.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* line 13, node_modules/edteam-style-guides/dev/scss/layout/_layout.scss */
+h1 + .subtitle, h2 + .subtitle, h3 + .subtitle, h4 + .subtitle, h5 + .subtitle, h6 + .subtitle {
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
+}
+
+/* line 19, node_modules/edteam-style-guides/dev/scss/layout/_layout.scss */
+li {
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+
+/* line 25, node_modules/edteam-style-guides/dev/scss/layout/_layout.scss */
+section,
+p,
+blockquote,
+pre,
+article,
+figure,
+iframe,
+video,
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* line 38, node_modules/edteam-style-guides/dev/scss/layout/_layout.scss */
+section + h2,
+p + h2,
+blockquote + h2,
+pre + h2,
+article + h2,
+figure + h2,
+iframe + h2,
+video + h2,
+ul + h2,
+ol + h2 {
+  padding-top: 1rem;
+}
+
+/* line 44, node_modules/edteam-style-guides/dev/scss/layout/_layout.scss */
+.l-block {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+/* line 50, node_modules/edteam-style-guides/dev/scss/layout/_layout.scss */
+.l-section {
+  margin-top: 0;
+  margin-bottom: 4rem;
+}
+
+/* line 54, node_modules/edteam-style-guides/dev/scss/layout/_layout.scss */
+.main-header + .l-section {
+  margin-top: 4rem;
+}
+
+/* line 58, node_modules/edteam-style-guides/dev/scss/layout/_layout.scss */
+.l-section--main {
+  margin-top: 0;
+  margin-bottom: 8rem;
+}
+
+/* line 64, node_modules/edteam-style-guides/dev/scss/layout/_layout.scss */
+.main-banner,
+.topbar {
+  margin-bottom: 4rem;
+}
+
+/* line 70, node_modules/edteam-style-guides/dev/scss/layout/_layout.scss */
+.topbar + .main-banner {
+  margin-top: -3rem;
+}
+
+/* line 37, node_modules/edteam-style-guides/dev/scss/components/_icons.scss */
+.svg-icon {
+  height: 1em;
+  width: 1em;
+  display: inline-block;
+  fill: currentcolor;
+}
+
+/* line 43, node_modules/edteam-style-guides/dev/scss/components/_icons.scss */
+.svg-icon.before {
+  margin-right: .3em;
+}
+
+/*
+* Button definitions at config/_buttons.scss
+*/
+/* line 6, node_modules/edteam-style-guides/dev/scss/components/_buttons.scss */
+.button,
+[class*="button--"] {
+  display: inline-block;
+  padding: 1em 2em;
+  background: #007BDF;
+  color: #FFF;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: .25rem;
+  transition: transform .05s;
+  border: none;
+  text-align: center;
+}
+
+/* line 16, node_modules/edteam-style-guides/dev/scss/config/_buttons.scss */
+.button:hover,
+[class*="button--"]:hover {
+  background: #006dc6;
+  text-decoration: inherit;
+}
+
+/* line 21, node_modules/edteam-style-guides/dev/scss/config/_buttons.scss */
+.button:active,
+[class*="button--"]:active {
+  transform: scale(0.99);
+}
+
+/* line 9, node_modules/edteam-style-guides/dev/scss/components/_buttons.scss */
+.button.center,
+[class*="button--"].center {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 10, node_modules/edteam-style-guides/dev/scss/components/_buttons.scss */
+.button.full,
+[class*="button--"].full {
+  margin-right: 0;
+  margin-left: 0;
+  width: 100%;
+}
+
+/* line 11, node_modules/edteam-style-guides/dev/scss/components/_buttons.scss */
+.button.button--small,
+[class*="button--"].button--small {
+  padding: .5rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* line 12, node_modules/edteam-style-guides/dev/scss/components/_buttons.scss */
+.button.button--tiny,
+[class*="button--"].button--tiny {
+  padding: .25rem .5rem;
+  font-size: 0.875rem;
+}
+
+/* line 13, node_modules/edteam-style-guides/dev/scss/components/_buttons.scss */
+.button.button--last,
+[class*="button--"].button--last {
+  margin-right: 0;
+}
+
+/* line 14, node_modules/edteam-style-guides/dev/scss/components/_buttons.scss */
+.button.big,
+[class*="button--"].big {
+  font-size: 1.25rem;
+}
+
+/* line 16, node_modules/edteam-style-guides/dev/scss/components/_buttons.scss */
+.button:last-of-type:not(.center),
+[class*="button--"]:last-of-type:not(.center) {
+  margin-right: 0;
+}
+
+/* line 22, node_modules/edteam-style-guides/dev/scss/components/_buttons.scss */
+.button--alert {
+  background: #FF3C32;
+}
+
+/* line 55, node_modules/edteam-style-guides/dev/scss/config/_buttons.scss */
+.button--alert:hover {
+  background: #FF2419;
+}
+
+/* line 23, node_modules/edteam-style-guides/dev/scss/components/_buttons.scss */
+.button--cta {
+  background: #FBA905;
+}
+
+/* line 63, node_modules/edteam-style-guides/dev/scss/config/_buttons.scss */
+.button--cta:hover {
+  background: #F1A000;
+}
+
+/* line 26, node_modules/edteam-style-guides/dev/scss/components/_buttons.scss */
+[class*="button--ghost"] {
+  color: #007BDF;
+  background: none;
+  border: 1px solid;
+}
+
+/* line 73, node_modules/edteam-style-guides/dev/scss/config/_buttons.scss */
+[class*="button--ghost"]:hover {
+  background: #007BDF;
+  color: #FFF;
+  border-color: transparent;
+}
+
+/* line 27, node_modules/edteam-style-guides/dev/scss/components/_buttons.scss */
+.button--ghost--alert {
+  color: #FF3C32;
+}
+
+/* line 83, node_modules/edteam-style-guides/dev/scss/config/_buttons.scss */
+.button--ghost--alert:hover {
+  background: #FF3C32;
+  color: #FFF;
+}
+
+/* line 28, node_modules/edteam-style-guides/dev/scss/components/_buttons.scss */
+.button--ghost--cta {
+  color: #FBA905;
+}
+
+/* line 92, node_modules/edteam-style-guides/dev/scss/config/_buttons.scss */
+.button--ghost--cta:hover {
+  background: #FBA905;
+  color: #FFF;
+}
+
+/*
+  MAIN MENU
+  Este es el menú principal del sitio, aparece dentro de main header
+
+  Su estructura es
+    <nav class="main-menu" id="main-menu">
+      <ul>
+        <li><a href="#">Item de menu</a></li>
+        <li><a href="#">Item de menu</a></li>
+      </ul>
+    </nav>
+
+  En movil se activa con un botón de hamburguesa.
+  En el ejemplo es un div pero puede ser cualquier elemento
+  (debe estar fuera del nav)
+    <div id="main-menu-toggle" class="main-menu-toggle to-l"></div>
+
+  Entra por la derecha justo debajo de main-header
+
+*/
+/* line 23, node_modules/edteam-style-guides/dev/scss/components/_main-menu.scss */
+.main-menu a:hover {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 27, node_modules/edteam-style-guides/dev/scss/components/_main-menu.scss */
+  .main-menu .active {
+    font-weight: 400;
+    color: #FF3C32;
+  }
+  /* line 33, node_modules/edteam-style-guides/dev/scss/components/_main-menu.scss */
+  .main-menu .active::before {
+    display: none;
+  }
+}
+
+/* line 41, node_modules/edteam-style-guides/dev/scss/components/_main-menu.scss */
+body {
+  position: relative;
+  right: 0;
+  transition: right .5s;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 46, node_modules/edteam-style-guides/dev/scss/components/_main-menu.scss */
+  body.main-menu-visible {
+    right: 80%;
+    overflow-y: hidden;
+  }
+}
+
+/* line 54, node_modules/edteam-style-guides/dev/scss/components/_main-menu.scss */
+.main-menu-toggle {
+  position: relative;
+  z-index: 300;
+  width: 30px;
+  height: 20px;
+  box-shadow: 0 4px #53575A inset;
+  cursor: pointer;
+}
+
+/* line 269, node_modules/ed-grid/components/_ed-menu.scss */
+.main-menu-toggle::after, .main-menu-toggle::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #53575A;
+  bottom: 0;
+}
+
+/* line 279, node_modules/ed-grid/components/_ed-menu.scss */
+.main-menu-toggle::after {
+  bottom: 8px;
+}
+
+/* line 104, node_modules/edteam-style-guides/dev/scss/components/_main-menu.scss */
+.main-menu {
+  font-size: 0.875rem;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 104, node_modules/edteam-style-guides/dev/scss/components/_main-menu.scss */
+  .main-menu {
+    position: fixed;
+    top: var(--header-height);
+    background: rgba(0, 123, 223, 0.95);
+    width: 80%;
+    right: -80%;
+    padding: 1em 1em 2em;
+    height: calc(100vh - 64px);
+    transition: right .5s;
+    overflow-y: auto;
+  }
+  /* line 73, node_modules/edteam-style-guides/dev/scss/components/_main-menu.scss */
+  .main-menu.show {
+    right: 0;
+  }
+}
+
+/* line 78, node_modules/edteam-style-guides/dev/scss/components/_main-menu.scss */
+.main-menu ul {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 78, node_modules/edteam-style-guides/dev/scss/components/_main-menu.scss */
+  .main-menu ul {
+    display: flex;
+  }
+}
+
+/* line 85, node_modules/edteam-style-guides/dev/scss/components/_main-menu.scss */
+.main-menu li {
+  color: #FFF;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1em 0;
+  margin: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 85, node_modules/edteam-style-guides/dev/scss/components/_main-menu.scss */
+  .main-menu li {
+    color: #53575A;
+    padding: 0;
+    margin-left: 2rem;
+  }
+}
+
+/* line 98, node_modules/edteam-style-guides/dev/scss/components/_main-menu.scss */
+.main-menu a {
+  color: inherit;
+}
+
+/* line 1, node_modules/edteam-style-guides/dev/scss/components/_vertical-menu.scss */
+.vertical-menu-toggle {
+  background-size: 100% 34%;
+  color: #007BDF;
+  font-size: 0.875rem;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 1, node_modules/edteam-style-guides/dev/scss/components/_vertical-menu.scss */
+  .vertical-menu-toggle {
+    display: flex;
+  }
+}
+
+/* line 8, node_modules/edteam-style-guides/dev/scss/components/_vertical-menu.scss */
+.vertical-menu-toggle::before {
+  content: "";
+  display: block;
+  width: .5em;
+  height: 1.2em;
+  background-image: radial-gradient(circle, #53575A 2px, transparent 2px);
+  background-size: 100% 34%;
+  margin-right: .2em;
+}
+
+/* line 17, node_modules/edteam-style-guides/dev/scss/components/_vertical-menu.scss */
+.vertical-menu-toggle::after {
+  content: attr(data-content);
+}
+
+/* line 22, node_modules/edteam-style-guides/dev/scss/components/_vertical-menu.scss */
+.vertical-menu {
+  border-right: 1px solid #DFE0E0;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 22, node_modules/edteam-style-guides/dev/scss/components/_vertical-menu.scss */
+  .vertical-menu {
+    max-height: 0;
+    transition: max-height .5s;
+    overflow: hidden;
+  }
+  /* line 30, node_modules/edteam-style-guides/dev/scss/components/_vertical-menu.scss */
+  .vertical-menu.show {
+    max-height: 1000px;
+    margin-bottom: 1em;
+  }
+  /* line 35, node_modules/edteam-style-guides/dev/scss/components/_vertical-menu.scss */
+  .vertical-menu .active::before {
+    display: none;
+  }
+}
+
+/* line 40, node_modules/edteam-style-guides/dev/scss/components/_vertical-menu.scss */
+.vertical-menu ul {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/* line 44, node_modules/edteam-style-guides/dev/scss/components/_vertical-menu.scss */
+.vertical-menu li {
+  padding: .4em 0;
+  border-bottom: none;
+  font-size: 0.875rem;
+  color: #53575A;
+}
+
+/* line 51, node_modules/edteam-style-guides/dev/scss/components/_vertical-menu.scss */
+.vertical-menu a {
+  color: inherit;
+  display: block;
+}
+
+/* line 55, node_modules/edteam-style-guides/dev/scss/components/_vertical-menu.scss */
+.vertical-menu a.active {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #FF3C32;
+}
+
+/* line 61, node_modules/edteam-style-guides/dev/scss/components/_vertical-menu.scss */
+.vertical-menu a.active::after {
+  content: '';
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background: url(https://ux.ed.team/img/icon-right.svg) center right/contain no-repeat;
+}
+
+/* line 69, node_modules/edteam-style-guides/dev/scss/components/_vertical-menu.scss */
+.vertical-menu a.active:hover {
+  text-decoration: none;
+}
+
+/* line 75, node_modules/edteam-style-guides/dev/scss/components/_vertical-menu.scss */
+.vertical-menu .active {
+  border-bottom: 1px solid #DFE0E0;
+  border-top: 1px solid #DFE0E0;
+  margin-right: -1px;
+  padding: .5em 0;
+  border-right: 1px solid #FAFDFF;
+}
+
+/* line 82, node_modules/edteam-style-guides/dev/scss/components/_vertical-menu.scss */
+.vertical-menu .active::after {
+  background: url(https://ux.ed.team/img/icon-right.svg) 100%/contain no-repeat !important;
+  margin-right: 1rem;
+}
+
+/* line 1, node_modules/edteam-style-guides/dev/scss/components/_logo.scss */
+.main-logo {
+  height: 2rem;
+  width: auto;
+  display: block;
+}
+
+/* line 1, node_modules/edteam-style-guides/dev/scss/components/_lists.scss */
+ul, ol {
+  padding-left: 2rem;
+  margin-left: 0;
+}
+
+/* line 10, node_modules/edteam-style-guides/dev/scss/components/_lists.scss */
+.data-list,
+.feature-list {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  margin-left: 0;
+  margin-bottom: 2em;
+}
+
+/* line 15, node_modules/edteam-style-guides/dev/scss/components/_lists.scss */
+.data-list li,
+.feature-list li {
+  border-bottom: 1px solid #DFE0E0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
+/* line 24, node_modules/edteam-style-guides/dev/scss/components/_lists.scss */
+.data-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 29, node_modules/edteam-style-guides/dev/scss/components/_lists.scss */
+.data-list li > :first-child {
+  margin-bottom: .5rem;
+  max-width: 75%;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 29, node_modules/edteam-style-guides/dev/scss/components/_lists.scss */
+  .data-list li > :first-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 41, node_modules/edteam-style-guides/dev/scss/components/_lists.scss */
+  .data-list li [class*="button"] {
+    font-size: 0.875rem;
+  }
+}
+
+/* line 46, node_modules/edteam-style-guides/dev/scss/components/_lists.scss */
+.data-list li li div:last-child p {
+  text-align: right;
+}
+
+/* line 51, node_modules/edteam-style-guides/dev/scss/components/_lists.scss */
+.data-list h1, .data-list h2, .data-list h3, .data-list h4, .data-list h5, .data-list h6, .data-list p, .data-list [class*="button"] {
+  margin: 0;
+}
+
+/* line 56, node_modules/edteam-style-guides/dev/scss/components/_lists.scss */
+.feature-list {
+  padding-left: 0;
+}
+
+/* line 58, node_modules/edteam-style-guides/dev/scss/components/_lists.scss */
+.feature-list li {
+  padding-left: 1.5rem;
+  list-style: none;
+  position: relative;
+}
+
+/* line 64, node_modules/edteam-style-guides/dev/scss/components/_lists.scss */
+.feature-list li::before {
+  content: '';
+  width: 1rem;
+  height: 1rem;
+  display: block;
+  position: absolute;
+  top: 1.25em;
+  left: 0;
+  color: #007BDF;
+  background: url(https://ux.ed.team/img/icon-check.svg);
+}
+
+/* line 1, node_modules/edteam-style-guides/dev/scss/components/_code.scss */
+code {
+  color: rgba(255, 60, 50, 0.9);
+  display: inline-block;
+  padding: 0 .5em;
+  margin: 0 .5em;
+  font-family: monospace;
+  line-height: 1.4;
+}
+
+/* line 10, node_modules/edteam-style-guides/dev/scss/components/_code.scss */
+pre code {
+  display: block;
+}
+
+/* line 14, node_modules/edteam-style-guides/dev/scss/components/_code.scss */
+:not(pre) code {
+  font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+  background: rgba(223, 224, 224, 0.5);
+  font-size: 0.875rem;
+  padding: 0 .25em;
+  margin: 0 .1em;
+  word-break: break-all;
+}
+
+/* line 1, node_modules/edteam-style-guides/dev/scss/components/_helpers.scss */
+.center {
+  text-align: center;
+}
+
+/* line 5, node_modules/edteam-style-guides/dev/scss/components/_helpers.scss */
+.strong {
+  font-weight: 700;
+}
+
+/* line 16, node_modules/edteam-style-guides/dev/scss/components/_tables.scss */
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  background: #FFF;
+  min-width: 100%;
+}
+
+/* line 2, node_modules/edteam-style-guides/dev/scss/components/_tables.scss */
+table th {
+  background: #007BDF;
+}
+
+/* line 3, node_modules/edteam-style-guides/dev/scss/components/_tables.scss */
+table tr {
+  border-bottom: 1px solid rgba(0, 123, 223, 0.3);
+}
+
+/* line 5, node_modules/edteam-style-guides/dev/scss/components/_tables.scss */
+table tr:hover {
+  background: rgba(0, 123, 223, 0.1);
+}
+
+/* line 9, node_modules/edteam-style-guides/dev/scss/components/_tables.scss */
+table.first-column td:first-child {
+  background: rgba(0, 123, 223, 0.75);
+  color: #fff;
+}
+
+/* line 24, node_modules/edteam-style-guides/dev/scss/components/_tables.scss */
+table th {
+  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+  color: #FFF;
+  font-weight: 700;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* line 32, node_modules/edteam-style-guides/dev/scss/components/_tables.scss */
+table td {
+  min-width: 100px;
+}
+
+/* line 34, node_modules/edteam-style-guides/dev/scss/components/_tables.scss */
+table td:nth-child(even) {
+  background: rgba(223, 224, 224, 0.2);
+}
+
+/* line 39, node_modules/edteam-style-guides/dev/scss/components/_tables.scss */
+table td, table th {
+  padding: 1em 1.5em;
+}
+
+/* line 44, node_modules/edteam-style-guides/dev/scss/components/_tables.scss */
+.table-container {
+  overflow-x: auto;
+  border: 1px solid #DFE0E0;
+  margin-bottom: 2em;
+  min-width: 100%;
+  position: relative;
+  table-layout: fixed;
+}
+
+/* line 2, node_modules/edteam-style-guides/dev/scss/components/_tables.scss */
+.table--secondary th {
+  background: #00CBFF;
+}
+
+/* line 3, node_modules/edteam-style-guides/dev/scss/components/_tables.scss */
+.table--secondary tr {
+  border-bottom: 1px solid rgba(0, 203, 255, 0.3);
+}
+
+/* line 5, node_modules/edteam-style-guides/dev/scss/components/_tables.scss */
+.table--secondary tr:hover {
+  background: rgba(0, 203, 255, 0.1);
+}
+
+/* line 9, node_modules/edteam-style-guides/dev/scss/components/_tables.scss */
+.table--secondary.first-column td:first-child {
+  background: rgba(0, 203, 255, 0.75);
+  color: #fff;
+}
+
+/* line 2, node_modules/edteam-style-guides/dev/scss/components/_tables.scss */
+.table--tertiary th {
+  background: #FF3C32;
+}
+
+/* line 3, node_modules/edteam-style-guides/dev/scss/components/_tables.scss */
+.table--tertiary tr {
+  border-bottom: 1px solid rgba(255, 60, 50, 0.3);
+}
+
+/* line 5, node_modules/edteam-style-guides/dev/scss/components/_tables.scss */
+.table--tertiary tr:hover {
+  background: rgba(255, 60, 50, 0.1);
+}
+
+/* line 9, node_modules/edteam-style-guides/dev/scss/components/_tables.scss */
+.table--tertiary.first-column td:first-child {
+  background: rgba(255, 60, 50, 0.75);
+  color: #fff;
+}
+
+/* line 2, node_modules/edteam-style-guides/dev/scss/components/_tables.scss */
+.table--accent th {
+  background: #FBA905;
+}
+
+/* line 3, node_modules/edteam-style-guides/dev/scss/components/_tables.scss */
+.table--accent tr {
+  border-bottom: 1px solid rgba(251, 169, 5, 0.3);
+}
+
+/* line 5, node_modules/edteam-style-guides/dev/scss/components/_tables.scss */
+.table--accent tr:hover {
+  background: rgba(251, 169, 5, 0.1);
+}
+
+/* line 9, node_modules/edteam-style-guides/dev/scss/components/_tables.scss */
+.table--accent.first-column td:first-child {
+  background: rgba(251, 169, 5, 0.75);
+  color: #fff;
+}
+
+/* line 2, node_modules/edteam-style-guides/dev/scss/components/_tables.scss */
+.table--dark th {
+  background: #282D31;
+}
+
+/* line 3, node_modules/edteam-style-guides/dev/scss/components/_tables.scss */
+.table--dark tr {
+  border-bottom: 1px solid rgba(40, 45, 49, 0.3);
+}
+
+/* line 5, node_modules/edteam-style-guides/dev/scss/components/_tables.scss */
+.table--dark tr:hover {
+  background: rgba(40, 45, 49, 0.1);
+}
+
+/* line 9, node_modules/edteam-style-guides/dev/scss/components/_tables.scss */
+.table--dark.first-column td:first-child {
+  background: rgba(40, 45, 49, 0.75);
+  color: #fff;
+}
+
+/* line 1, node_modules/edteam-style-guides/dev/scss/components/_forms.scss */
+.form__item {
+  margin-bottom: 2rem;
+}
+
+/* line 5, node_modules/edteam-style-guides/dev/scss/components/_forms.scss */
+[type="text"],
+[type="email"],
+[type="password"],
+[type="number"],
+[type="date"],
+[type="search"],
+select,
+textarea {
+  display: block;
+  border: 1px solid #DFE0E0;
+  background: #fff;
+  width: 100%;
+  line-height: 1.6;
+  font-family: Lato, "sans-serif";
+  font-size: 0.875rem;
+  color: #53575A;
+  border-radius: .25rem;
+  padding: .5rem 1rem;
+}
+
+/* line 24, node_modules/edteam-style-guides/dev/scss/components/_forms.scss */
+[type="text"]::placeholder,
+[type="email"]::placeholder,
+[type="password"]::placeholder,
+[type="number"]::placeholder,
+[type="date"]::placeholder,
+[type="search"]::placeholder,
+select::placeholder,
+textarea::placeholder {
+  color: rgba(83, 87, 90, 0.75);
+}
+
+/* line 28, node_modules/edteam-style-guides/dev/scss/components/_forms.scss */
+[type="text"]:disabled,
+[type="email"]:disabled,
+[type="password"]:disabled,
+[type="number"]:disabled,
+[type="date"]:disabled,
+[type="search"]:disabled,
+select:disabled,
+textarea:disabled {
+  background: #DFE0E0;
+  cursor: default;
+}
+
+/* line 34, node_modules/edteam-style-guides/dev/scss/components/_forms.scss */
+[type="search"] {
+  background: #fff url(https://ux.ed.team/img/icon-search.svg) center right 1rem/1rem no-repeat !important;
+}
+
+/* line 38, node_modules/edteam-style-guides/dev/scss/components/_forms.scss */
+select {
+  appearance: none;
+  background: #fff url(https://ux.ed.team/img/arrow.svg) center right 1rem/1rem no-repeat !important;
+}
+
+/* line 43, node_modules/edteam-style-guides/dev/scss/components/_forms.scss */
+textarea {
+  min-height: 6em;
+}
+
+/* line 47, node_modules/edteam-style-guides/dev/scss/components/_forms.scss */
+label {
+  position: relative;
+  display: block;
+  font-size: 0.875rem;
+  margin-bottom: .2em;
+}
+
+/* line 52, node_modules/edteam-style-guides/dev/scss/components/_forms.scss */
+label + input::placeholder {
+  display: none;
+}
+
+/* line 57, node_modules/edteam-style-guides/dev/scss/components/_forms.scss */
+[type="submit"] {
+  margin: 0 !important;
+}
+
+/* line 1, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+.card {
+  box-shadow: 0 2px 16px -2px rgba(0, 0, 0, 0.15);
+  border: none;
+  background: #fff;
+  border-radius: 0.25rem;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+/* line 8, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+.card p, .card [class*="button"] {
+  margin: 0;
+}
+
+/* line 13, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+.card__img {
+  flex: none;
+}
+
+/* line 16, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+.card__img img {
+  display: block;
+  border-radius: .25rem .25rem 0 0;
+}
+
+/* line 22, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+.card__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  font-size: 0.875rem;
+  padding: 1rem;
+}
+
+/* line 30, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+.card__title {
+  font-family: "Open Sans", "sans-serif";
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* line 35, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+.card__title + .card__subtitle {
+  margin-top: -1rem;
+}
+
+/* line 40, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+.card__subtitle {
+  font-size: 0.875rem;
+  opacity: .5;
+  margin-bottom: .5rem;
+}
+
+/* line 46, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+.card__body {
+  margin-bottom: 1rem;
+}
+
+/* line 50, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+.card__footer {
+  margin-top: auto;
+  font-size: 0.875rem;
+  border-top: 1px solid #DFE0E0;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 63, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+.card--course .card__footer {
+  border-top: none;
+  margin-top: -1.5rem;
+}
+
+/* line 70, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+.card--course-next .card__footer {
+  padding-top: .5rem;
+}
+
+/* line 75, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+.card--next-class {
+  border: none;
+  box-shadow: none;
+  position: relative;
+  color: #fff;
+}
+
+/* line 81, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+.card--next-class a {
+  color: currentColor;
+  display: block;
+}
+
+/* line 86, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+.card--next-class img {
+  display: block;
+}
+
+/* line 90, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+.card--next-class .card__content {
+  position: absolute;
+  bottom: 0;
+  background: rgba(40, 45, 49, 0.8);
+  width: 100%;
+}
+
+/* line 97, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+.card--next-class .card__title {
+  font-size: 1.25rem;
+  font-family: Lato, "sans-serif";
+  font-weight: 400;
+}
+
+/* line 103, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+.card--next-class .card__footer {
+  padding-top: 0;
+  border: none;
+  margin-top: -.5rem;
+}
+
+/* line 111, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+.card__user {
+  display: flex;
+  align-items: center;
+}
+
+/* line 115, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+.card__user a {
+  color: #53575A;
+}
+
+/* line 121, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+.card__user-img img {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  margin-right: .5rem;
+}
+
+/* line 132, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+[class*="card--mini"] .card__title {
+  margin-bottom: .25rem;
+}
+
+/* line 135, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+[class*="card--mini"] .card__body {
+  font-size: 0.875rem;
+  padding-top: .5rem;
+  border-top: 1px solid #FBA905;
+}
+
+/* line 141, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+[class*="card--mini"] .card__footer {
+  border-top: none;
+  padding-top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 148, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+  .card--mini-horizontal {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/* line 154, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+.card--mini-horizontal .card__img {
+  flex: 1;
+}
+
+/* line 157, node_modules/edteam-style-guides/dev/scss/components/_cards.scss */
+.card--mini-horizontal .card__img img {
+  border-radius: .25rem 0 0 .25rem;
+}
+
+/* line 1, node_modules/edteam-style-guides/dev/scss/components/_post.scss */
+.post-header {
+  position: relative;
+  margin-bottom: 2em;
+}
+
+/* line 4, node_modules/edteam-style-guides/dev/scss/components/_post.scss */
+.post-header img {
+  display: block;
+}
+
+/* line 8, node_modules/edteam-style-guides/dev/scss/components/_post.scss */
+.post-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(40, 45, 49, 0.8);
+}
+
+/* line 18, node_modules/edteam-style-guides/dev/scss/components/_post.scss */
+.post-header h1 {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  width: 90%;
+  left: 5%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+/* line 30, node_modules/edteam-style-guides/dev/scss/components/_post.scss */
+.post .author {
+  display: table;
+  margin: -5em auto 2em;
+  position: relative;
+}
+
+/* line 35, node_modules/edteam-style-guides/dev/scss/components/_post.scss */
+.post .author img {
+  border: 4px solid #fff;
+}
+
+/* line 1, node_modules/edteam-style-guides/dev/scss/components/_main-banner.scss */
+.main-banner {
+  --color: var(--first-color);
+  background: var(--color);
+  color: #FFF;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
+  position: relative;
+  padding-top: 2rem;
+  padding-bottom: 2.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 1, node_modules/edteam-style-guides/dev/scss/components/_main-banner.scss */
+  .main-banner {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+  }
+}
+
+/* line 17, node_modules/edteam-style-guides/dev/scss/components/_main-banner.scss */
+.main-banner h1, .main-banner h2 {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 17, node_modules/edteam-style-guides/dev/scss/components/_main-banner.scss */
+  .main-banner h1, .main-banner h2 {
+    font-size: 1.25rem;
+  }
+}
+
+/* line 21, node_modules/edteam-style-guides/dev/scss/components/_main-banner.scss */
+.main-banner h1 + .subtitle, .main-banner h2 + .subtitle {
+  margin-top: .5rem;
+  margin-bottom: 0;
+}
+
+/* line 27, node_modules/edteam-style-guides/dev/scss/components/_main-banner.scss */
+.main-banner [class*=button] {
+  margin-top: 1rem;
+}
+
+/* line 32, node_modules/edteam-style-guides/dev/scss/components/_main-banner.scss */
+.main-banner__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .2;
+  filter: blur(12px);
+}
+
+/* line 43, node_modules/edteam-style-guides/dev/scss/components/_main-banner.scss */
+.main-banner__data {
+  text-align: center;
+  position: relative;
+}
+
+/* line 48, node_modules/edteam-style-guides/dev/scss/components/_main-banner.scss */
+.main-banner__author {
+  color: #fff;
+  margin-top: .5rem;
+}
+
+/* line 52, node_modules/edteam-style-guides/dev/scss/components/_main-banner.scss */
+.main-banner__author a {
+  color: inherit;
+}
+
+/* line 56, node_modules/edteam-style-guides/dev/scss/components/_main-banner.scss */
+.main-banner__author-img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 2px solid;
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 65, node_modules/edteam-style-guides/dev/scss/components/_main-banner.scss */
+.main-banner__author-name {
+  font-size: 0.875rem;
+}
+
+/* line 1, node_modules/edteam-style-guides/dev/scss/components/_main-header.scss */
+[class*="main-header"] {
+  height: var(--header-height);
+  border-bottom: 1px solid #DFE0E0;
+  display: flex;
+  align-items: center;
+  background: #FFF;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 100;
+}
+
+/* line 14, node_modules/edteam-style-guides/dev/scss/components/_main-header.scss */
+.main-header--dark {
+  background: var(--dark-color-alt);
+  border-bottom: none;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 19, node_modules/edteam-style-guides/dev/scss/components/_main-header.scss */
+  .main-header--dark li {
+    border-bottom: none;
+  }
+}
+
+/* line 24, node_modules/edteam-style-guides/dev/scss/components/_main-header.scss */
+.main-header--dark a {
+  color: rgba(223, 224, 224, 0.5);
+}
+
+/* line 1, node_modules/edteam-style-guides/dev/scss/components/_main-footer.scss */
+.main-footer {
+  background: #282D31;
+  color: #FFF;
+  padding: 2rem 0;
+  font-size: 0.875rem;
+  margin-top: auto;
+}
+
+/* line 1, node_modules/edteam-style-guides/dev/scss/components/_topbar.scss */
+[class*="topbar"] {
+  background: #007BDF;
+  color: #fff;
+  font-size: 0.875rem;
+}
+
+/* line 6, node_modules/edteam-style-guides/dev/scss/components/_topbar.scss */
+[class*="topbar"] .ed-item {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 6, node_modules/edteam-style-guides/dev/scss/components/_topbar.scss */
+  [class*="topbar"] .ed-item {
+    height: var(--header-height);
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 6, node_modules/edteam-style-guides/dev/scss/components/_topbar.scss */
+  [class*="topbar"] .ed-item {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    justify-content: center;
+  }
+}
+
+/* line 21, node_modules/edteam-style-guides/dev/scss/components/_topbar.scss */
+[class*="topbar"] p, [class*="topbar"] .button, [class*="topbar"] form, [class*="topbar"] input, [class*="topbar"] a {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: inherit;
+}
+
+/* line 27, node_modules/edteam-style-guides/dev/scss/components/_topbar.scss */
+[class*="topbar"] form {
+  flex: auto;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 27, node_modules/edteam-style-guides/dev/scss/components/_topbar.scss */
+  [class*="topbar"] form {
+    display: none;
+  }
+}
+
+/* line 32, node_modules/edteam-style-guides/dev/scss/components/_topbar.scss */
+[class*="topbar"] input {
+  border: none;
+}
+
+/* line 38, node_modules/edteam-style-guides/dev/scss/components/_topbar.scss */
+.topbar--secondary {
+  background: #00CBFF;
+}
+
+/* line 39, node_modules/edteam-style-guides/dev/scss/components/_topbar.scss */
+.topbar--tertiary {
+  background: #FF3C32;
+}
+
+/* line 40, node_modules/edteam-style-guides/dev/scss/components/_topbar.scss */
+.topbar--accent {
+  background: #FBA905;
+}
+
+/* line 41, node_modules/edteam-style-guides/dev/scss/components/_topbar.scss */
+.topbar--dark {
+  background: #282D31;
+}
+
+/* line 1, node_modules/edteam-style-guides/dev/scss/components/_modal.scss */
+.ed-modal-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(250, 253, 255, 0.9);
+  display: flex;
+  z-index: 1000;
+}
+
+/* line 11, node_modules/edteam-style-guides/dev/scss/components/_modal.scss */
+.ed-modal-container::before {
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  background: url(https://ux.ed.team/img/icon-close.svg);
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
+/* line 23, node_modules/edteam-style-guides/dev/scss/components/_modal.scss */
+.ed-modal-content {
+  box-shadow: 0 2px 16px -2px rgba(0, 0, 0, 0.15);
+  border: none;
+  background: #fff;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+  border-radius: .25rem;
+}
+
+/* line 32, node_modules/edteam-style-guides/dev/scss/components/_modal.scss */
+.video {
+  width: 100%;
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+
+/* line 39, node_modules/edteam-style-guides/dev/scss/components/_modal.scss */
+.video iframe {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 3, node_modules/edteam-style-guides/dev/scss/components/_tabs.scss */
+  .edui-tabs--class {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    border: none;
+    margin-top: -2rem;
+  }
+}
+
+/* line 12, node_modules/edteam-style-guides/dev/scss/components/_tabs.scss */
+.edui-tabs .tabs {
+  display: flex;
+  position: relative;
+  left: 1rem;
+  top: 1px;
+}
+
+/* line 19, node_modules/edteam-style-guides/dev/scss/components/_tabs.scss */
+.edui-tabs .tab {
+  border: 1px solid #DFE0E0;
+  padding: 1rem;
+  border-radius: .25rem .25rem 0 0;
+  margin-right: .5rem;
+  background: #fff;
+  cursor: pointer;
+  opacity: .5;
+}
+
+/* line 28, node_modules/edteam-style-guides/dev/scss/components/_tabs.scss */
+.edui-tabs .tab.active {
+  border-bottom: 1px solid #fff;
+  opacity: 1;
+}
+
+/* line 33, node_modules/edteam-style-guides/dev/scss/components/_tabs.scss */
+.edui-tabs .tab img {
+  width: 2.25rem;
+  display: block;
+}
+
+/* line 38, node_modules/edteam-style-guides/dev/scss/components/_tabs.scss */
+.edui-tabs .tab .tab {
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  margin: 0;
+  opacity: 1;
+}
+
+/* line 51, node_modules/edteam-style-guides/dev/scss/components/_tabs.scss */
+.edui-tabs .panel {
+  box-shadow: 0 2px 16px -2px rgba(0, 0, 0, 0.15);
+  border: none;
+  background: #fff;
+  display: none;
+  border-radius: .25rem;
+  padding: 2rem;
+}
+
+/* line 61, node_modules/edteam-style-guides/dev/scss/components/_tabs.scss */
+.edui-tabs .panel.active {
+  display: block;
+}
+
+/* line 67, node_modules/edteam-style-guides/dev/scss/components/_tabs.scss */
+.edui-tabs .tabs--class {
+  left: 0;
+  border-radius: .25rem .25rem 0 0;
+  overflow: hidden;
+}
+
+/* line 72, node_modules/edteam-style-guides/dev/scss/components/_tabs.scss */
+.edui-tabs .tabs--class::before {
+  content: "";
+  display: block;
+  width: 25%;
+  height: 4px;
+  background: var(--second-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: transform .25s ease-in;
+}
+
+/* line 84, node_modules/edteam-style-guides/dev/scss/components/_tabs.scss */
+.edui-tabs .tabs--class[data-tab="2"]::before {
+  transform: translateX(100%);
+}
+
+/* line 88, node_modules/edteam-style-guides/dev/scss/components/_tabs.scss */
+.edui-tabs .tabs--class[data-tab="3"]::before {
+  transform: translateX(200%);
+}
+
+/* line 92, node_modules/edteam-style-guides/dev/scss/components/_tabs.scss */
+.edui-tabs .tabs--class[data-tab="4"]::before {
+  transform: translateX(300%);
+}
+
+/* line 98, node_modules/edteam-style-guides/dev/scss/components/_tabs.scss */
+.edui-tabs .tab--class {
+  width: 25%;
+  text-align: center;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  background: var(--dark-color);
+  color: var(--border-color);
+  opacity: 1;
+  height: 3rem;
+  padding: .6rem 0 0;
+  display: flex;
+  justify-content: center;
+  line-height: 1.6;
+  box-shadow: 0 -4px rgba(255, 255, 255, 0.5) inset;
+}
+
+/* line 114, node_modules/edteam-style-guides/dev/scss/components/_tabs.scss */
+.edui-tabs .tab--class.active {
+  color: var(--second-color);
+  border: none;
+  background: var(--dark-color-alt);
+}
+
+/* line 121, node_modules/edteam-style-guides/dev/scss/components/_tabs.scss */
+.edui-tabs .panels--class {
+  height: calc(100vh - 10rem);
+  overflow: auto;
+  border: 1px solid var(--border-color);
+  background: #fff;
+  border-radius: 0 0 .25rem .25rem;
+  box-shadow: 0 2px 16px -2px rgba(0, 0, 0, 0.15);
+  border: none;
+  background: #fff;
+}
+
+/* line 130, node_modules/edteam-style-guides/dev/scss/components/_tabs.scss */
+.edui-tabs .panel--class {
+  padding: 2rem 1rem 1rem;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+/* line 2, node_modules/edteam-style-guides/dev/scss/components/_payments.scss */
+.payment-method__name {
+  padding-bottom: .5rem;
+  border-bottom: 1px solid #DFE0E0;
+  margin-bottom: .5rem;
+}
+
+/* line 8, node_modules/edteam-style-guides/dev/scss/components/_payments.scss */
+.payment-method__notes {
+  margin-top: -1.5rem;
+}
+
+/* line 12, node_modules/edteam-style-guides/dev/scss/components/_payments.scss */
+.payment-method__account {
+  color: #FF3C32;
+}
+
+/* line 2, node_modules/edteam-style-guides/dev/scss/components/_video-class.scss */
+.video-class {
+  background: var(--dark-color);
+}
+
+@media screen and (min-aspect-ratio: 8 / 5) {
+  /* line 2, node_modules/edteam-style-guides/dev/scss/components/_video-class.scss */
+  .video-class {
+    height: calc(100vh - 3rem);
+  }
+}
+
+/* line 11, node_modules/edteam-style-guides/dev/scss/components/_video-class.scss */
+.video-class--container {
+  position: fixed;
+  top: var(--header-height);
+  width: 100%;
+  z-index: 100;
+}
+
+@media screen and (min-width: 960px) {
+  /* line 11, node_modules/edteam-style-guides/dev/scss/components/_video-class.scss */
+  .video-class--container {
+    position: static;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-aspect-ratio: 8 / 5) {
+  /* line 11, node_modules/edteam-style-guides/dev/scss/components/_video-class.scss */
+  .video-class--container {
+    height: calc(100vh - 9rem);
+    padding: 1rem;
+  }
+}
+
+/* line 30, node_modules/edteam-style-guides/dev/scss/components/_video-class.scss */
+.video-class--element {
+  margin: auto;
+}
+
+/* line 33, node_modules/edteam-style-guides/dev/scss/components/_video-class.scss */
+.video-class--element iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 40, node_modules/edteam-style-guides/dev/scss/components/_video-class.scss */
+.video-class--footer {
+  background: var(--dark-color-alt);
+  color: #fff;
+  padding: 1rem 0;
+}
+
+@media screen and (min-aspect-ratio: 8 / 5) {
+  /* line 40, node_modules/edteam-style-guides/dev/scss/components/_video-class.scss */
+  .video-class--footer {
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+}
+
+/* line 54, node_modules/edteam-style-guides/dev/scss/components/_video-class.scss */
+.video-class--title {
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 54, node_modules/edteam-style-guides/dev/scss/components/_video-class.scss */
+  .video-class--title {
+    font-size: 1rem;
+  }
+}
+
+/* line 59, node_modules/edteam-style-guides/dev/scss/components/_video-class.scss */
+.video-class--course {
+  color: var(--accent-color);
+  font-size: 0.875rem;
+  margin: -.5rem 0 0 0;
+  opacity: .75;
+}
+
+/* line 67, node_modules/edteam-style-guides/dev/scss/components/_video-class.scss */
+.video-class--next, .video-class--prev {
+  width: 2rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+/* line 1, node_modules/edteam-style-guides/dev/scss/components/_live.scss */
+.video-live {
+  background: var(--dark-color);
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 3, node_modules/edteam-style-guides/dev/scss/components/_live.scss */
+  .video-live__container {
+    display: grid;
+    padding: 1rem;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr minmax(320px, 360px);
+  }
+}
+
+/* line 13, node_modules/edteam-style-guides/dev/scss/components/_live.scss */
+.video-live__video.video-fixed {
+  position: fixed;
+  z-index: var(--z-fixed);
+  top: var(--header-height);
+  left: 0;
+}
+
+/* line 21, node_modules/edteam-style-guides/dev/scss/components/_live.scss */
+.video-live__data {
+  color: var(--border-color);
+  padding: 1rem 0;
+}
+
+/* line 25, node_modules/edteam-style-guides/dev/scss/components/_live.scss */
+.video-live__data [class*="button"] {
+  margin-right: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 21, node_modules/edteam-style-guides/dev/scss/components/_live.scss */
+  .video-live__data {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+  /* line 34, node_modules/edteam-style-guides/dev/scss/components/_live.scss */
+  .video-live__data [class*="button"] {
+    margin-right: 6rem;
+  }
+}
+
+/* line 40, node_modules/edteam-style-guides/dev/scss/components/_live.scss */
+.video-live__title-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* line 45, node_modules/edteam-style-guides/dev/scss/components/_live.scss */
+.video-live__title-container [class*="button"] {
+  margin-right: 1rem;
+}
+
+/* line 50, node_modules/edteam-style-guides/dev/scss/components/_live.scss */
+.video-live__title {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 50, node_modules/edteam-style-guides/dev/scss/components/_live.scss */
+  .video-live__title {
+    font-size: 1rem;
+  }
+}
+
+/* line 55, node_modules/edteam-style-guides/dev/scss/components/_live.scss */
+.video-live__footer {
+  background: var(--dark-color-alt);
+}
+
+/* line 1, node_modules/edteam-style-guides/dev/scss/components/_temary.scss */
+.class-temary {
+  padding-top: 2rem;
+  counter-reset: subjects;
+}
+
+/* line 7, node_modules/edteam-style-guides/dev/scss/components/_temary.scss */
+.class-subject__title {
+  counter-increment: subjects;
+  margin-bottom: 0;
+}
+
+/* line 11, node_modules/edteam-style-guides/dev/scss/components/_temary.scss */
+.class-subject__title::before {
+  content: counter(subjects) ".";
+  display: inline-block;
+  margin-right: .25rem;
+}
+
+/* line 20, node_modules/edteam-style-guides/dev/scss/components/_temary.scss */
+.class-fragment__title {
+  position: relative;
+}
+
+/* line 22, node_modules/edteam-style-guides/dev/scss/components/_temary.scss */
+.class-fragment__title a {
+  color: var(--text-color);
+  position: relative;
+  left: 1.5em;
+}
+
+/* line 28, node_modules/edteam-style-guides/dev/scss/components/_temary.scss */
+.class-fragment__title img {
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  top: .25em;
+}
+
+/* line 40, node_modules/edteam-style-guides/dev/scss/components/_temary.scss */
+.class-fragment [class*="button"] {
+  margin-left: 1em;
+  font-size: 12px;
+}
+
+/* line 43, node_modules/edteam-style-guides/dev/scss/components/_temary.scss */
+.class-fragment [class*="button"]:hover {
+  text-decoration: none;
+}
+
+/* line 1, node_modules/edteam-style-guides/dev/scss/components/_chat.scss */
+.chat {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: var(--border-color);
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 1, node_modules/edteam-style-guides/dev/scss/components/_chat.scss */
+  .chat {
+    padding: 0 1rem;
+    max-height: 500px;
+  }
+}
+
+/* line 12, node_modules/edteam-style-guides/dev/scss/components/_chat.scss */
+.chat__send {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+/* line 16, node_modules/edteam-style-guides/dev/scss/components/_chat.scss */
+.chat__send-message {
+  width: 100%;
+  display: block;
+  padding: .75em 2.5em .75em .75em;
+  line-height: 1.6;
+  border-radius: .25rem;
+  border: 1px solid var(--border-color);
+}
+
+/* line 25, node_modules/edteam-style-guides/dev/scss/components/_chat.scss */
+.chat__send-submit {
+  width: 1.5em;
+  position: absolute;
+  right: .75em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* line 34, node_modules/edteam-style-guides/dev/scss/components/_chat.scss */
+.chat__info {
+  color: var(--text-color);
+  margin-top: -.5rem;
+  opacity: .5;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+/* line 42, node_modules/edteam-style-guides/dev/scss/components/_chat.scss */
+.chat__messages {
+  padding-top: 1rem;
+}
+
+/* line 46, node_modules/edteam-style-guides/dev/scss/components/_chat.scss */
+.chat__message {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: .75rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+/* line 52, node_modules/edteam-style-guides/dev/scss/components/_chat.scss */
+.chat__message-avatar {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+/* line 56, node_modules/edteam-style-guides/dev/scss/components/_chat.scss */
+.chat__message-avatar img {
+  border-radius: .25rem;
+}
+
+/* line 61, node_modules/edteam-style-guides/dev/scss/components/_chat.scss */
+.chat__message-user, .chat__message-date {
+  vertical-align: super;
+  margin-right: .5rem;
+  opacity: .8;
+}
+
+/* line 68, node_modules/edteam-style-guides/dev/scss/components/_chat.scss */
+.chat__message-user {
+  font-weight: bold;
+}
+
+/* line 72, node_modules/edteam-style-guides/dev/scss/components/_chat.scss */
+.chat__message-comment {
+  margin: -.4em 0 0;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 80, node_modules/edteam-style-guides/dev/scss/components/_chat.scss */
+  .video-live__chat .chat {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+/* line 88, node_modules/edteam-style-guides/dev/scss/components/_chat.scss */
+.video-live__chat .chat__send-message {
+  background: var(--dark-color-alt);
+  color: var(--border-color);
+  border: 1px solid rgba(251, 169, 5, 0.3);
+}
+
+/* line 95, node_modules/edteam-style-guides/dev/scss/components/_chat.scss */
+.video-live__chat .chat__messages {
+  background: var(--dark-color-alt);
+  padding: 1rem;
+  border-radius: .25rem;
+  overflow-y: auto;
+}
+
+/* line 102, node_modules/edteam-style-guides/dev/scss/components/_chat.scss */
+.video-live__chat .chat__message {
+  border-bottom: 1px solid rgba(255, 60, 50, 0.3);
+  color: inherit;
+}
+
+/* line 107, node_modules/edteam-style-guides/dev/scss/components/_chat.scss */
+.video-live__chat .chat-user, .video-live__chat .chat-date {
+  opacity: .5;
+}
+
+/* line 3, node_modules/edteam-style-guides/dev/scss/components/_notes.scss */
+.add-note textarea {
+  margin-bottom: .5rem;
+}
+
+/* line 7, node_modules/edteam-style-guides/dev/scss/components/_notes.scss */
+.add-note__info {
+  opacity: .5;
+  font-style: italic;
+  margin-bottom: .5rem;
+}
+
+/* line 14, node_modules/edteam-style-guides/dev/scss/components/_notes.scss */
+.notes {
+  padding-top: 2rem;
+}
+
+/* line 18, node_modules/edteam-style-guides/dev/scss/components/_notes.scss */
+.note {
+  border: 1px solid var(--border-color);
+  font-size: 0.875rem;
+  border-radius: .25rem;
+}
+
+/* line 23, node_modules/edteam-style-guides/dev/scss/components/_notes.scss */
+.note--edit {
+  background: rgba(251, 169, 5, 0.075);
+}
+
+/* line 27, node_modules/edteam-style-guides/dev/scss/components/_notes.scss */
+.note--delete {
+  position: relative;
+}
+
+/* line 30, node_modules/edteam-style-guides/dev/scss/components/_notes.scss */
+.note--delete__alert {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(251, 169, 5, 0.5);
+}
+
+/* line 45, node_modules/edteam-style-guides/dev/scss/components/_notes.scss */
+.note__header {
+  background: var(--text-color);
+  color: var(--border-color);
+  padding: .5rem 1rem;
+  border-radius: .25rem .25rem 0 0;
+  font-size: 12px;
+}
+
+/* line 51, node_modules/edteam-style-guides/dev/scss/components/_notes.scss */
+.note__header p {
+  margin: 0;
+}
+
+/* line 56, node_modules/edteam-style-guides/dev/scss/components/_notes.scss */
+.note__content {
+  padding: 1rem 1rem .5rem;
+}
+
+/* line 59, node_modules/edteam-style-guides/dev/scss/components/_notes.scss */
+.note__content p, .note__content blockquote, .note__content pre {
+  margin-bottom: 1rem;
+}
+
+/* line 64, node_modules/edteam-style-guides/dev/scss/components/_notes.scss */
+.note__footer {
+  padding: 0 1rem 1rem;
+}
+
+/* line 67, node_modules/edteam-style-guides/dev/scss/components/_notes.scss */
+.note__footer img {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 1rem;
+}
+
+/* line 2, node_modules/edteam-style-guides/dev/scss/components/_resources.scss */
+.resources li {
+  padding-left: .5em;
+}
+
+/* line 5, node_modules/edteam-style-guides/dev/scss/components/_resources.scss */
+.resources li::before {
+  background: none;
+}
+
+/* line 10, node_modules/edteam-style-guides/dev/scss/components/_resources.scss */
+.resources img {
+  width: 1em;
+  height: 1em;
+  margin-right: .5em;
+}
+
+/* line 16, node_modules/edteam-style-guides/dev/scss/components/_resources.scss */
+.resources a {
+  color: var(--text-color);
+}
+
+/* line 2, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.course-header {
+  position: relative;
+  margin-bottom: 2rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 8, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.course-header::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10vw;
+  width: 120vw;
+  height: 120%;
+  filter: blur(10px);
+  background: linear-gradient(rgba(40, 45, 49, 0.9), rgba(40, 45, 49, 0.9)), url(https://ed.team/sites/default/files/styles/large/public/courses/images/css-animaciones-poster-1280.jpg) no-repeat center/cover;
+}
+
+/* line 22, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.course-data {
+  color: #fff;
+  position: relative;
+  padding: 2rem 0;
+}
+
+@media screen and (min-width: 1440px) {
+  /* line 22, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+  .course-data {
+    padding: 4rem 0;
+  }
+}
+
+/* line 31, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.course-data__subtitle {
+  margin-top: -1rem;
+}
+
+/* line 35, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.course-data__description, .course-data__stars-info,
+.course-data__live-or-record span {
+  opacity: 0.8;
+}
+
+/* line 41, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.course-data__more-info {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 400px) {
+  /* line 41, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+  .course-data__more-info {
+    flex-direction: row;
+  }
+}
+
+/* line 51, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.course-data__calification {
+  display: flex;
+  margin-right: 2rem;
+}
+
+/* line 56, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.course-data__stars {
+  margin-right: 1rem;
+}
+
+/* line 60, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.course-data__live-or-record span {
+  margin-left: 0.25em;
+}
+
+/* line 67, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.course-info {
+  border-radius: 0.25rem;
+  position: relative;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #DFE0E0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 639px) {
+  /* line 75, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+  .course-info__item:nth-child(2) {
+    margin: 1rem 0;
+  }
+}
+
+/* line 81, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.course-info__title {
+  border-bottom: 1px solid #DFE0E0;
+  font-family: "Open Sans", "sans-serif";
+}
+
+/* line 86, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.course-info__list {
+  padding: 0;
+  margin-left: 0.5rem;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+/* line 93, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.course-info__list-item {
+  position: relative;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+/* line 98, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.course-info__list-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0.20rem;
+  width: 1rem;
+  height: 1rem;
+  background: url("https://ed.team/themes/custom/escueladigital/img/active-check.svg") no-repeat 50%/contain;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 118, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+  .course-main .span-l-1 {
+    order: 1;
+  }
+  /* line 122, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+  .course-main .span-l-3 {
+    order: 2;
+  }
+  /* line 128, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+  .card--sidebar {
+    margin-bottom: 2rem;
+  }
+}
+
+/* line 134, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.course-main {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 134, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+  .course-main {
+    margin-bottom: 4rem;
+  }
+}
+
+/* line 144, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.temary-accordion {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #DFE0E0;
+  border-radius: 0.25rem;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 151, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+  .temary-accordion:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+/* line 157, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.temary-accordion__main-title {
+  font-family: "Open Sans", "sans-serif";
+  outline: none;
+}
+
+/* line 162, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.temary-accordion__list {
+  padding: 1rem 1rem 0;
+  margin-bottom: 0;
+}
+
+/* line 167, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.temary-accordion__item {
+  display: flex;
+  justify-content: space-between;
+  color: #53575A;
+}
+
+/* line 173, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.temary-accordion__title {
+  position: relative;
+  margin-bottom: 0.25rem;
+  padding-left: 1.5rem;
+  color: inherit;
+}
+
+/* line 179, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.temary-accordion__title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  width: 12px;
+  height: 12px;
+  opacity: 0.5;
+  background: url("https://ed.team/themes/custom/escueladigital/img/padlock.svg") no-repeat 50%/contain;
+}
+
+/* line 191, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.temary-accordion__title.free-class {
+  color: var(--accent-color);
+}
+
+/* line 194, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.temary-accordion__title.free-class::before {
+  opacity: 1;
+  background: url("https://ed.team/themes/custom/escueladigital/img/active-check.svg") no-repeat 50%/contain;
+}
+
+/* line 206, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.card {
+  /*Estilo que se usarán en desktop para el sidebar*/
+}
+
+/* line 209, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.card.card--sidebar {
+  /*Sobreescribir la altura que tiene en la clase card*/
+  height: auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* line 222, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.card__info {
+  padding: 0 1rem 1rem;
+}
+
+/* line 226, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.card__teacher-photo {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  transform: translate(0, -50%);
+}
+
+/* line 234, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.card__title {
+  margin-top: -2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* line 239, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.card__teacher-name.small {
+  margin-top: -0.5rem;
+  font-weight: normal;
+}
+
+/* line 243, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.card__teacher-name.small::before {
+  content: "Profesor ";
+}
+
+/* line 249, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.card__price.t2 {
+  margin: 0.5rem 0;
+}
+
+/* line 253, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.card__button:nth-of-type(2) {
+  margin-top: 1rem;
+}
+
+/* line 257, node_modules/edteam-style-guides/dev/scss/components/_course.scss */
+.card .smaller {
+  margin-top: 0.25rem;
+  font-style: italic;
+}
+
+/*
+* This file use declarations, functions and mixins from
+* config/_typography.scss
+*/
+/* line 6, node_modules/edteam-style-guides/dev/scss/theme/_typography.scss */
+body {
+  font-family: Lato, "sans-serif";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #53575A;
+}
+
+/*******************************************************
+**********************FONT SIZES************************
+* There are 6 font sizes represents 6 HTML heading sizes
+* Classes t1 - t6 are for heading font family
+* Clases smaller, small, normal, big, bigger, biggest are for body font family
+* If you want apply font-size from Sass (without html class)
+  use @include t1, @include t2, @include t3
+  fontSize(normal) fontSize(small) fontSize(smaller)
+********************************************************/
+/* line 26, node_modules/edteam-style-guides/dev/scss/theme/_typography.scss */
+h1, h2, h3, h4, h5, h6,
+.t1, .t2, .t3, .t4, .t5, .t6 {
+  font-family: "Open Sans", "sans-serif";
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+/* line 35, node_modules/edteam-style-guides/dev/scss/theme/_typography.scss */
+.body-font {
+  font-family: Lato, "sans-serif";
+}
+
+/* line 36, node_modules/edteam-style-guides/dev/scss/theme/_typography.scss */
+.heading-font {
+  font-family: "Open Sans", "sans-serif";
+}
+
+/* line 39, node_modules/edteam-style-guides/dev/scss/theme/_typography.scss */
+h1, .t1, .biggest {
+  font-size: 2.25rem;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 39, node_modules/edteam-style-guides/dev/scss/theme/_typography.scss */
+  h1, .t1, .biggest {
+    font-size: 1.5rem;
+  }
+}
+
+/* line 40, node_modules/edteam-style-guides/dev/scss/theme/_typography.scss */
+h2, .t2, .bigger {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 40, node_modules/edteam-style-guides/dev/scss/theme/_typography.scss */
+  h2, .t2, .bigger {
+    font-size: 1.25rem;
+  }
+}
+
+/* line 41, node_modules/edteam-style-guides/dev/scss/theme/_typography.scss */
+h3, .t3, .big {
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 41, node_modules/edteam-style-guides/dev/scss/theme/_typography.scss */
+  h3, .t3, .big {
+    font-size: 1rem;
+  }
+}
+
+/* line 42, node_modules/edteam-style-guides/dev/scss/theme/_typography.scss */
+h4, .t4, .normal {
+  font-size: 1rem;
+}
+
+/* line 43, node_modules/edteam-style-guides/dev/scss/theme/_typography.scss */
+h5, .t5, .small {
+  font-size: 0.875rem;
+}
+
+/* line 44, node_modules/edteam-style-guides/dev/scss/theme/_typography.scss */
+h6, .t6, .smaller {
+  font-size: 0.8125rem;
+}
+
+/* line 47, node_modules/edteam-style-guides/dev/scss/theme/_typography.scss */
+blockquote {
+  font-size: 1.25rem;
+  font-style: italic;
+  letter-spacing: .01em;
+  margin-left: 2rem;
+  position: relative;
+  opacity: .9;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 47, node_modules/edteam-style-guides/dev/scss/theme/_typography.scss */
+  blockquote {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 47, node_modules/edteam-style-guides/dev/scss/theme/_typography.scss */
+  blockquote {
+    margin-left: 4rem;
+  }
+}
+
+/* line 59, node_modules/edteam-style-guides/dev/scss/theme/_typography.scss */
+blockquote::before {
+  content: "\201C";
+  font-family: Georgia, serif;
+  font-size: 3em;
+  position: absolute;
+  top: .5em;
+  left: -.6em;
+  line-height: 0;
+  letter-spacing: -0.5em;
+}
+
+/* line 73, node_modules/edteam-style-guides/dev/scss/theme/_typography.scss */
+a {
+  color: #00CBFF;
+}
+
+/* line 76, node_modules/edteam-style-guides/dev/scss/theme/_typography.scss */
+main a {
+  text-decoration: none;
+}
+
+/* line 79, node_modules/edteam-style-guides/dev/scss/theme/_typography.scss */
+main a:hover {
+  text-decoration: underline;
+}
+
+/* line 85, node_modules/edteam-style-guides/dev/scss/theme/_typography.scss */
+::selection {
+  background: #00CBFF;
+  color: #FFF;
+}
+
+/* line 1, node_modules/edteam-style-guides/dev/scss/theme/_colors.scss */
+.colors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* line 9, node_modules/edteam-style-guides/dev/scss/theme/_colors.scss */
+.color {
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* line 28, node_modules/edteam-style-guides/dev/scss/theme/_colors.scss */
+.color__sample {
+  padding-bottom: 56.25%;
+  height: 0;
+  border-radius: .25rem .25rem 0 0;
+}
+
+/* line 33, node_modules/edteam-style-guides/dev/scss/theme/_colors.scss */
+.color__sample.bodyBg {
+  border: 1px solid #DFE0E0;
+}
+
+/* line 38, node_modules/edteam-style-guides/dev/scss/theme/_colors.scss */
+.color__sample.firstColor {
+  background: #007BDF;
+}
+
+/* line 38, node_modules/edteam-style-guides/dev/scss/theme/_colors.scss */
+.color__sample.firstColorAlt {
+  background: #006DC6;
+}
+
+/* line 38, node_modules/edteam-style-guides/dev/scss/theme/_colors.scss */
+.color__sample.secondColor {
+  background: #00CBFF;
+}
+
+/* line 38, node_modules/edteam-style-guides/dev/scss/theme/_colors.scss */
+.color__sample.secondColorAlt {
+  background: #00BFF0;
+}
+
+/* line 38, node_modules/edteam-style-guides/dev/scss/theme/_colors.scss */
+.color__sample.thirdColor {
+  background: #FF3C32;
+}
+
+/* line 38, node_modules/edteam-style-guides/dev/scss/theme/_colors.scss */
+.color__sample.thirdColorAlt {
+  background: #FF2419;
+}
+
+/* line 38, node_modules/edteam-style-guides/dev/scss/theme/_colors.scss */
+.color__sample.accentColor {
+  background: #FBA905;
+}
+
+/* line 38, node_modules/edteam-style-guides/dev/scss/theme/_colors.scss */
+.color__sample.accentColorAlt {
+  background: #F1A000;
+}
+
+/* line 38, node_modules/edteam-style-guides/dev/scss/theme/_colors.scss */
+.color__sample.darkColor {
+  background: #282D31;
+}
+
+/* line 38, node_modules/edteam-style-guides/dev/scss/theme/_colors.scss */
+.color__sample.darkColorAlt {
+  background: #141618;
+}
+
+/* line 38, node_modules/edteam-style-guides/dev/scss/theme/_colors.scss */
+.color__sample.borderColor {
+  background: #DFE0E0;
+}
+
+/* line 38, node_modules/edteam-style-guides/dev/scss/theme/_colors.scss */
+.color__sample.textColor {
+  background: #53575A;
+}
+
+/* line 38, node_modules/edteam-style-guides/dev/scss/theme/_colors.scss */
+.color__sample.bodyBg {
+  background: #FAFDFF;
+}
+
+/* line 78, node_modules/edteam-style-guides/dev/scss/theme/_colors.scss */
+.color__info {
+  text-align: center;
+  border: 1px solid #DFE0E0;
+  border-top: none;
+  padding: 1em;
+  background: #fff;
+  border-radius: 0 0 .25rem .25rem;
+}
+
+/* line 87, node_modules/edteam-style-guides/dev/scss/theme/_colors.scss */
+.color__name, .color__code {
+  margin: 0;
+}
+
+/* line 92, node_modules/edteam-style-guides/dev/scss/theme/_colors.scss */
+.color__name {
+  font-weight: 700;
+}
+
+/* line 1, node_modules/edteam-style-guides/dev/scss/hacks/_hacks.scss */
+td [class*="button"] {
+  display: inline;
+}
+
+/* line 4, node_modules/edteam-style-guides/dev/scss/hacks/_hacks.scss */
+td [class*="button"]:last-child {
+  margin-right: 0;
+}
+
+/* line 11, node_modules/edteam-style-guides/dev/scss/hacks/_hacks.scss */
+.ed-grid .ed-grid, .ed-grid.full {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* line 1, dev/scss/base/base.scss */
+*,
+*::before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* line 7, dev/scss/base/base.scss */
+body {
+  margin: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 1, dev/scss/layout/_layout.scss */
+  .main-header {
+    height: 4rem;
+  }
+}
+
+/* line 1, dev/scss/components/_users.scss */
+.user {
+  display: flex;
+  align-items: center;
+}
+
+/* line 5, dev/scss/components/_users.scss */
+.user__avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* line 12, dev/scss/components/_users.scss */
+.user__data {
+  margin-left: 1rem;
+}
+
+/* line 16, dev/scss/components/_users.scss */
+.user__name {
+  font-weight: 700;
+  font-family: "Open Sans", "sans-serif";
+}
+
+/* line 21, dev/scss/components/_users.scss */
+.user__country {
+  display: flex;
+  align-items: center;
+}
+
+/* line 26, dev/scss/components/_users.scss */
+.user__flag {
+  width: 1.5rem;
+  height: 1rem;
+  margin-right: .5rem;
+}
+
+/* line 35, dev/scss/components/_users.scss */
+.home-users .user {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 35, dev/scss/components/_users.scss */
+  .home-users .user {
+    margin-bottom: 2rem;
+  }
+}
+
+/* line 43, dev/scss/components/_users.scss */
+.home-users .user + .user::after {
+  content: "";
+  display: block;
+  width: 1px;
+  background: #FF3C32;
+  height: 1.6rem;
+  bottom: calc(100px + 0.2rem);
+  left: 50px;
+  position: absolute;
+}
+
+/* line 2, dev/scss/components/_subscription-card.scss */
+.card--subscription .card__title {
+  font-family: Lato, "sans-serif";
+}
+
+/* line 5, dev/scss/components/_subscription-card.scss */
+.card--subscription .card__img {
+  width: 138px;
+  flex: none;
+}
+
+/* line 9, dev/scss/components/_subscription-card.scss */
+.card--subscription .card__img img {
+  display: block;
+}
+
+/* line 14, dev/scss/components/_subscription-card.scss */
+.card--subscription .card__content {
+  align-items: flex-start;
+}
+
+/* line 18, dev/scss/components/_subscription-card.scss */
+.card--subscription [class*=button] {
+  display: inline-flex;
+  font-size: 1.25rem;
+  padding: .4rem 1rem;
+  align-items: center;
+}
+
+/* line 24, dev/scss/components/_subscription-card.scss */
+.card--subscription [class*=button]::before {
+  content: "";
+  display: inline-block;
+  width: 2rem;
+  height: 1.5rem;
+  background: url(../img/ticket.svg) no-repeat center/contain;
+  margin-right: .25rem;
+}
+
+/* line 34, dev/scss/components/_subscription-card.scss */
+.card--subscription + span {
+  padding-top: .5rem;
+  display: block;
+}
+
+/* line 1, dev/scss/components/_edcamp-features.scss */
+.edcamp-features {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 6, dev/scss/components/_edcamp-features.scss */
+.edcamp-features li::before {
+  content: "";
+  display: inline-block;
+  margin-right: .4rem;
+  width: 1rem;
+  height: 1rem;
+  background: url(../img/check.svg) no-repeat center;
+}
+
+/* line 1, dev/scss/components/_social-buttons.scss */
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* line 5, dev/scss/components/_social-buttons.scss */
+.social-icons a {
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-left: .5rem;
+  opacity: .5;
+}
+
+/* line 12, dev/scss/components/_social-buttons.scss */
+.social-icons a:hover {
+  opacity: 1;
+}
+
+/* line 1, dev/scss/theme/_theme.scss */
+.diagonal-section {
+  position: relative;
+}
+
+/* line 4, dev/scss/theme/_theme.scss */
+.diagonal-section__content {
+  position: relative;
+  padding: 2rem 0 4rem;
+}
+
+/* line 9, dev/scss/theme/_theme.scss */
+.diagonal-section::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #00CBFF;
+  transform: skewY(-1.5deg);
+  opacity: .075;
+}
+
+/* line 21, dev/scss/theme/_theme.scss */
+.diagonal-section.left::before {
+  transform: skewY(1.5deg);
+}
+
+/* line 27, dev/scss/theme/_theme.scss */
+.diagonal-section.third::before {
+  background: #FF3C32;
+}
+
+/* line 33, dev/scss/theme/_theme.scss */
+.diagonal-section.accent::before {
+  background: #FBA905;
+}
+
+/* line 1, dev/scss/hacks/_hacks.scss */
+.main-banner__img {
+  filter: none;
+  opacity: .15;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 6, dev/scss/hacks/_hacks.scss */
+  .main-banner {
+    padding-top: 8rem;
+    padding-bottom: 9rem;
+  }
+}
+
+/* line 13, dev/scss/hacks/_hacks.scss */
+.card__title {
+  font-size: 1.25rem;
+  margin-top: 0;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 13, dev/scss/hacks/_hacks.scss */
+  .card__title {
+    font-size: 1rem;
+  }
+}
+
+/* line 17, dev/scss/hacks/_hacks.scss */
+.card__title + .card__subtitle {
+  margin-top: -.5rem;
+}
+
+/* line 22, dev/scss/hacks/_hacks.scss */
+.card__body {
+  margin-bottom: 1rem;
+}
+
+/* line 26, dev/scss/hacks/_hacks.scss */
+.location::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-right: .25rem;
+  position: relative;
+  top: 2px;
+  background: url(../img/icon-pin.svg) no-repeat;
+}
+
+/* line 39, dev/scss/hacks/_hacks.scss */
+.section-title {
+  margin-bottom: 2rem;
+}
+
+/* line 44, dev/scss/hacks/_hacks.scss */
+.ed-container {
+  max-width: 1280px;
+}
+
+@media screen and (min-width: 1280px) {
+  /* line 49, dev/scss/hacks/_hacks.scss */
+  .ed-grid {
+    width: 1200px;
+  }
+}
+
+@media screen and (min-width: 1344px) {
+  /* line 55, dev/scss/hacks/_hacks.scss */
+  .ed-grid {
+    width: 1200px;
+  }
+}

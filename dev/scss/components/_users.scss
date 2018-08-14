@@ -34,21 +34,27 @@
 .home-users {
   .user {
     position : relative;
-    margin-bottom : 1rem;
     @include from(l){
       margin-bottom : 2rem;
     }
 
-    + .user {
-      &::after {
-        content: "";
-        display : block;
-        width: 1px;
-        background : $thirdColor;
-        height : 1.6rem;
-        bottom: calc(100px + 0.2rem);
-        left: 50px;
-        position : absolute;
+    @include to(l) {
+      width : 80%;
+      margin : 0 auto 1rem;
+    }
+
+    @include from(l) {
+      + .user {
+        &::after {
+          content: "";
+          display : block;
+          width: 1px;
+          background : $thirdColor;
+          height : 1.6rem;
+          bottom: calc(100px + 0.2rem);
+          left: 50px;
+          position : absolute;
+        }
       }
     }
 

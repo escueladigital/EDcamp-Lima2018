@@ -1,14 +1,47 @@
 .talk {
   display : flex;
   position : relative;
+
+  @include to(l) {
+    flex-wrap: wrap;
+  }
   &__speaker {
     flex: none;
     margin-right : 1rem;
     width: 30%;
   }
 
+  &__info {
+    width: calc(70% - 1rem);
+  }
+
   .user {
     margin-bottom : 0;
+    @include to(l) {
+      display : block;
+      text-align : center;
+      .user__avatar {
+        width : 60px;
+        height : 60px;
+        display : block;
+        margin : auto;
+      }
+
+      .user__data {
+        margin-left : 0;
+        line-height : 1.3;
+      }
+      
+      .user__country {
+        display : flex;
+        justify-content: center;
+        font-size: 0;
+
+        img {
+          margin : .5rem 0 0;
+        }
+      }
+    }
   }
 
   p {
@@ -22,11 +55,14 @@
 
 .talk-break {
   @include talk-break($firstColor,presentacion);
-  padding : 2rem;
+  padding : 1rem;
+  @include from(l) {
+    padding : 2rem;
+    font-size: fontSize(title3);
+  }
   border-radius : .25rem;
   text-align : right;
   color: #fff;
-  font-size: fontSize(title3);
   font-weight : bold;
   font-family : $heading-font;
   position : relative;
@@ -41,27 +77,37 @@
 }
 
 .talk__hour {
-  position : absolute;
-  font-size: fontSize(smaller);
-  color: $thirdColor;
-  font-family : $body-font;
-  font-weight : 700;
-  top : 50%;
-  transform: translateY(-50%);
-  left : -6rem;
+  font-size   : fontSize(smaller);
+    color       : $thirdColor;
 
-  &::after {
-    content: "";
-    display: block;
-    position : absolute;
-    width: .6rem;
-    height : .6rem;
-    border : 1px solid;
-    background: #e7f9ff;
-    border-radius : 50%;
-    right : -1.4rem;
-    top: 50%;
-    transform: translateY(-50%);
+  @include to(l) {
+    width : 100%;
+    text-align : center;
+    margin-bottom : .5rem;
+  }
+  @include from(l) {
+    position    : absolute;
+    font-family : $body-font;
+    font-weight : 700;
+    top         : 50%;
+    transform   : translateY(-50%);
+    left        : -8rem;
+    width       : 4rem;
+    text-align  : right;
+
+    &::after {
+      content       : "";
+      display       : block;
+      position      : absolute;
+      width         : .6rem;
+      height        : .6rem;
+      border        : 1px solid;
+      background    : #E7F9FF;
+      border-radius : 50%;
+      right         : -2.3rem;
+      top           : 50%;
+      transform     : translateY(-50%);
+    }
   }
 }
 
@@ -72,7 +118,7 @@
     content: '';
     width: 1px;
     background : $thirdColor;
-    height : calc(100% + 4rem);
+    height : calc(100% + 5rem);
     position : absolute;
     left : -2rem;
     top: 50%;
@@ -80,5 +126,20 @@
 
   &:last-child::before {
     display : none;
+  }
+}
+
+.talk-break {
+  @include to(l) {
+    display : flex;
+    align-items: center;
+    justify-content: space-between;
+    .talk__hour {
+      color: #fff;
+      width : 30%;
+      margin-right : 1rem;
+      margin-bottom : 0;
+      text-align : left;
+    }
   }
 }

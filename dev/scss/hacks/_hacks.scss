@@ -73,3 +73,22 @@
     margin-bottom : 2rem;
   }
 }
+
+
+.card {
+  height : auto !important;
+
+  &__footer [class*=button] {
+    margin-left : 1rem;
+  }
+}
+
+
+.edcamp-logo {
+  height: 3rem;
+  margin-bottom : .5rem;
+
+  @include from(l) {
+    height : 5rem;
+  }
+}

@@ -1,11 +1,16 @@
 .card--subscription {
   height : auto !important;
+
   .card__title {
     font-family : $body-font;
   }
   .card__img {
     width : 138px;
     flex: none;
+
+    @include to(l) {
+      display : none;
+    }
 
     img {
       display : block;
@@ -14,6 +19,11 @@
 
   .card__content {
     align-items: flex-start;
+
+    @include to(l) {
+      display: block;
+      text-align : center;
+    }
   }
 
   [class*=button] {
@@ -21,6 +31,10 @@
     font-size : fontSize(title3);
     padding : .4rem 1rem;
     align-items: center;
+
+    del {
+      margin : 0 .25rem;
+    }
 
     &::before {
       content: "";
@@ -35,6 +49,8 @@
   + span {
     padding-top : .5rem;
     display : block;
-
+    @include to(l) {
+      text-align : center;
+    }
   }
 }
