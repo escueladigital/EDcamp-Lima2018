@@ -1,0 +1,37 @@
+.diagonal-section {
+  position: relative;
+
+  &__content {
+    position: relative;
+    padding: 2rem 0 4rem;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: $secondColor;
+    transform: skewY(-1.5deg);
+    opacity : .075;
+  }
+
+  &.left {
+    &::before {
+      transform: skewY(1.5deg)
+    }
+  }
+
+  &.third {
+    &::before {
+      background : $thirdColor;
+    }
+  }
+
+  &.accent {
+    &::before {
+      background : $accentColor;
+    }
+  }
+}

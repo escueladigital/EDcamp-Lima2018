@@ -1,0 +1,8 @@
+mixin banner(color,image,title,subtitle)
+  .main-banner.l-section(class="main-banner--"+color)
+      .ed-container
+        .ed-item.l-75.to-center
+          img(src='img/'+image).main-banner__img
+          .main-banner__data
+            h1=title
+            p.subtitle=subtitle

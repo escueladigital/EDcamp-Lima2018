@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #fba905;
+      }
+
+      .cls-2 {
+        fill: #fba905;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_583" data-name="Group 583" transform="translate(-352 -127)">
+    <g id="Ellipse_26" data-name="Ellipse 26" class="cls-1" transform="translate(352 127)">
+      <circle class="cls-3" cx="6" cy="6" r="6"/>
+      <circle class="cls-4" cx="6" cy="6" r="5.5"/>
+    </g>
+    <path id="Union_8" data-name="Union 8" class="cls-2" d="M2.886,6.5A.876.876,0,0,1,2.5,6.379L.445,5.175A.911.911,0,0,1,.119,3.941.882.882,0,0,1,1.334,3.61l1.284.753L4.841.452A.882.882,0,0,1,6.055.121a.911.911,0,0,1,.325,1.234L3.721,6.033l-.008.015a.9.9,0,0,1-.147.193.883.883,0,0,1-.624.259Z" transform="translate(354.75 129.75)"/>
+  </g>
+</svg>

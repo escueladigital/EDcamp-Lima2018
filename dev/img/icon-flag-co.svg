@@ -1,0 +1,20 @@
+<svg id="icon-flag-co" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff4b55;
+      }
+
+      .cls-2 {
+        fill: #ffe15a;
+      }
+
+      .cls-3 {
+        fill: #41479b;
+      }
+    </style>
+  </defs>
+  <path id="Path_1089" data-name="Path 1089" class="cls-1" d="M0,342.033a1.813,1.813,0,0,0,1.8,1.829H22.2a1.813,1.813,0,0,0,1.8-1.829v-2.171H0Z" transform="translate(0 -327.862)"/>
+  <path id="Path_1090" data-name="Path 1090" class="cls-2" d="M22.2,88.276H1.8A1.813,1.813,0,0,0,0,90.1v6.171H24V90.1A1.813,1.813,0,0,0,22.2,88.276Z" transform="translate(0 -88.276)"/>
+  <rect id="Rectangle_65" data-name="Rectangle 65" class="cls-3" width="24" height="4" transform="translate(0 8)"/>
+</svg>

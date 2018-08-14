@@ -1,0 +1,82 @@
+.user {
+  display: flex;
+  align-items: center;
+
+  &__avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__data {
+    margin-left: 1rem;
+  }
+
+  &__name {
+    font-weight: 700;
+    font-family: $heading-font;
+  }
+
+  &__country {
+    display: flex;
+    align-items: center;
+  }
+
+  &__flag {
+    width: 1.5rem;
+    height: 1rem;
+    margin-right: .5rem;
+  }
+}
+
+
+.home-users {
+  .user {
+    position : relative;
+    margin-bottom : 1rem;
+    @include from(l){
+      margin-bottom : 2rem;
+    }
+
+    + .user {
+      &::after {
+        content: "";
+        display : block;
+        width: 1px;
+        background : $thirdColor;
+        height : 1.6rem;
+        bottom: calc(100px + 0.2rem);
+        left: 50px;
+        position : absolute;
+      }
+    }
+
+    //&::before {
+    //  content: "";
+    //  display : block;
+    //  width: .5rem;
+    //  height : .5rem;
+    //  border : 1px solid $thirdColor;
+    //  background : #fff;
+    //  border-radius : 50%;
+    //  position : absolute;
+    //  left : -2rem;
+    //  z-index : $z-tooltip;
+    //}
+    //
+    //+ .user {
+    //  &::after {
+    //    content: "";
+    //    display : block;
+    //    position : absolute;
+    //    left : - 1.8rem;
+    //    width : 1px;
+    //    height : calc(100% + 2rem);
+    //    border-left: 1px solid $thirdColor;
+    //    bottom: 50%
+    //  }
+    //}
+
+  }
+}
