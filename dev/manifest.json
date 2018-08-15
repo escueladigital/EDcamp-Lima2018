@@ -1,0 +1,26 @@
+{
+  "name": "EDcamp Lima 2018",
+  "short_name": "EDcamp",
+  "theme_color": "#fafdff",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "./?utm=homescreen",
+  "scope": "./",
+  "icons": [
+    {
+      "src": "./img/logo/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/logo/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/logo/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

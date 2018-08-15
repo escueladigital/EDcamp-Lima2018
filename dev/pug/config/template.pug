@@ -17,6 +17,18 @@ html(lang="es")
     link(rel="stylesheet" href="css/styles.css")
     link(rel="shortcut icon" href="img/EDteam-favicon.png")
     link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,400i,700|Open+Sans:700")
+    //- pwa config
+    link(rel="manifest" href="./manifest.json")
+    meta(name="theme-color" content="#fafdff")
+    //- Configuración para dispositivos IOS
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style" content="black")
+    meta(name="format-detection" content="telephone=no")
+    meta(name="apple-mobile-web-app-title" content="EDcamp")
+
+    //- Meta tags para windows
+    meta(name="msapplication-TileColor" content="#F7DF1E")
+    meta(name="msapplication-TileImage" content="./img/logo/icon_192x192.png")
   body
     include ../includes/header
     block main
