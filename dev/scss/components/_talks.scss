@@ -84,22 +84,28 @@
 
 .talk__hour {
   font-size   : fontSize(smaller);
-    color       : $thirdColor;
+  color       : $thirdColor;
+  font-family : $body-font;
 
   @include to(l) {
     width : 100%;
     text-align : center;
     margin-bottom : .5rem;
   }
+
   @include from(l) {
     position    : absolute;
-    font-family : $body-font;
     font-weight : 700;
     top         : 50%;
     transform   : translateY(-50%);
     left        : -8rem;
     width       : 4rem;
     text-align  : right;
+
+    span {
+      font-size : 0;
+      display : block;
+    }
 
     &::after {
       content       : "";
@@ -117,24 +123,26 @@
   }
 }
 
-// lineas
-
+// lineas verticales
 .talk, .talk-break {
-  &::before {
-    content: '';
-    width: 1px;
-    background : $thirdColor;
-    height : calc(100% + 5rem);
-    position : absolute;
-    left : -2rem;
-    top: 50%;
-  }
+  @include from(l){
+    &::before {
+      content: '';
+      width: 1px;
+      background : $thirdColor;
+      height : calc(100% + 5rem);
+      position : absolute;
+      left : -2rem;
+      top: 50%;
+    }
 
-  &:last-child::before {
-    display : none;
+    &:last-child::before {
+      display : none;
+    }
   }
 }
 
+// Diseño de horario de los breaks en movil
 .talk-break {
   @include to(l) {
     display : flex;
