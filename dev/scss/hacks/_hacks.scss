@@ -92,3 +92,23 @@
     height : 5rem;
   }
 }
+
+
+// A guia de estilos
+
+@each $align in left, center, right {
+  @each $bp, $size in $breakpoints {
+
+    @if $bp == s {
+      .#{$align} {
+        text-align : $align;
+      }
+    } @else {
+      @include from($bp) {
+        .#{$bp}-#{$align} {
+          text-align : $align;
+        }
+      }
+    }
+  }
+}
