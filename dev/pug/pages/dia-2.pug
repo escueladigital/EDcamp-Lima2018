@@ -100,7 +100,8 @@ block main
       .span-l-3
         h2.t1 ¿Dónde?
         p.location Edificio empresarial El Almirante Av. Petit Thoaurs 1775 int 1001, Lince
-        p Verificaremos tu inscripción en puerta. Llega temprano.
+        a.button--ghost--alert.button--tiny(href="https://www.google.com/maps/place/Edificio+El+Almirante/@-12.081983,-77.0336556,17z/data=!4m12!1m6!3m5!1s0x9105c8f4cd007a37:0x1e0400e44d1a3f1e!2sEdificio+El+Almirante!8m2!3d-12.0819759!4d-77.0335961!3m4!1s0x9105c8f4cd007a37:0x1e0400e44d1a3f1e!8m2!3d-12.0819759!4d-77.0335961" target="_blank") Ver en Google Maps
+        p Verificaremos tu inscripción en puerta. El ingreso inicia a las 8:30am.
       .span-l-7
         img(src="img/mapa-dia-2.png")
   section.l-section.diagonal-section.left.third
@@ -111,14 +112,19 @@ block main
         +suscriptionCard('workshops', 'Workshops', 'Sábado 1 de setiembre (9am - 7pm)', '300', '270','* Acceso gratuito al taller de emprendimiento', 'cta', '89')
       .span-l-5.l-block
         h3 Tu inscripción incluye
-        ul.edcamp-features.smaller
+        ul.edcamp-features.small
           li Certificado
           li Coffe break
           li Polo de EDteam
           li Libreta y lapicero de EDteam
           li Stickers, pines y llaveros
-          li Sorteo de mouse gamer Logitech G900 Chaos Spectrum
-          li Sorteo de teclado gamer Logitech G810 Orion Spectrum
+          li Sorteo de mouse gamer Logitech G900 Chaos Spectrum &nbsp;
+            a(href="https://www.logitechg.com/es-roam/product/g900-chaos-spectrum-mouse" target="_blank") (Ver detalles)
+          li Sorteo de teclado gamer Logitech G810 Orion Spectrum &nbsp;
+            a(href="https://www.logitechg.com/es-es/product/g810-orion-spectrum-rgb-gaming-keyboard" target="_blank") (Ver detalles)
+          li Sorteo de suscripciones a EDteam
+          li Descuentos en cursos y suscripciones a EDteam
+          li Acceso a materiales, código y grabaciones de los talleres DE POR VIDA en la App de EDteam
 
   section.l-section
     include ../includes/faq
