@@ -96,9 +96,8 @@
 
 // A guia de estilos
 
-@each $align in left, center, right {
-  @each $bp, $size in $breakpoints {
-
+@each $bp, $size in $breakpoints {
+  @each $align in left, center, right {
     @if $bp == s {
       .#{$align} {
         text-align : $align;
