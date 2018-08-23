@@ -13,6 +13,7 @@ import sourcemaps from 'gulp-sourcemaps'
 import buffer from 'vinyl-buffer'
 import minify from 'gulp-minify'
 import imagemin from 'gulp-imagemin'
+import sitemap from 'gulp-sitemap'
 
 const server = browserSync.create()
 
@@ -45,18 +46,18 @@ gulp.task('styles', () => {
     ? gulp.src('./dev/scss/styles.scss')
       .pipe(plumber())
       .pipe(sass(sassOptions))
-      .pipe(gulp.dest('./public/css/'))
+      .pipe(gulp.dest('./public/assets/css/'))
       .pipe(server.stream({match: '**/*.css'}))
     : gulp.src('./dev/scss/styles.scss')
       .pipe(plumber())
       .pipe(sass(sassOptions))
       .pipe(postcss(postcssPlugins))
-      .pipe(gulp.dest('./public/css/'))
+      .pipe(gulp.dest('./public/assets/css'))
       .pipe(server.stream({match: '**/*.css'}))
 })
 
 gulp.task('pug', () =>
-  gulp.src('./dev/pug/pages/*.pug')
+  gulp.src('./dev/pug/pages/**/*.pug')
     .pipe(plumber())
     .pipe(pug({
       pretty: !production
@@ -84,7 +85,7 @@ gulp.task('scripts', () =>
     }))
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./public/js'))
+    .pipe(gulp.dest('./public/assets/js'))
 )
 
 gulp.task('images', () => {
@@ -95,8 +96,18 @@ gulp.task('images', () => {
     imagemin.optipng({optimizationLevel: 5}),
     imagemin.svgo()
    ]))
-   .pipe(gulp.dest('./public/img'))
+   .pipe(gulp.dest('./public/assets/img'))
  });
+
+gulp.task('sitemap', () => {
+  gulp.src('./public/**/*.html', {
+    read: false
+  })
+    .pipe(sitemap({
+      siteUrl: 'https://lima2018.ed.team'
+    }))
+    .pipe(gulp.dest('./public'))
+})
 
 gulp.task('default', ['styles', 'pug', 'images','scripts'], () => {
   server.init({

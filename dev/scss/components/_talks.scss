@@ -2,6 +2,15 @@
   display : flex;
   position : relative;
 
+  // perfil de speakers
+  &--speaker-profile {
+    display : block;
+
+    .talk__speaker {
+      width : 100%;
+    }
+  }
+
   @include to(l) {
     flex-wrap: wrap;
   }
@@ -14,40 +23,6 @@
 
   &__info {
     width: calc(70% - 1rem);
-  }
-
-  .user {
-    margin-bottom : 0;
-
-    @include to(l) {
-      display : block;
-      text-align : center;
-
-      .user__avatar {
-        width : 60px;
-        height : 60px;
-        display : block;
-      }
-
-      .user__data {
-        margin-left : 0;
-        line-height : 1.3;
-      }
-      
-      .user__country {
-        display : flex;
-        justify-content: center;
-        font-size: 0;
-
-        img {
-          margin : .5rem 0 0;
-        }
-      }
-    }
-
-    .user__avatar {
-      margin : auto;
-    }
   }
 
   p {
@@ -137,6 +112,12 @@
     }
 
     &:last-child::before {
+      display : none;
+    }
+  }
+
+  &--speaker-profile {
+    &::before {
       display : none;
     }
   }

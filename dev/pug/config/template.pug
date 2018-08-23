@@ -2,6 +2,7 @@ block config
   include variables
   include ../includes/banner-mixin
   include ../includes/user-mixin
+  include ../includes/user-profile-mixin
   include ../includes/inscription-card-mixin
 doctype html
 html(lang="es")
@@ -14,17 +15,42 @@ html(lang="es")
     meta(property="og:title" content=pageTitle)
     meta(property="og:description" content=pageDescription)
     meta(property="og:image" content=pageImage)
-    link(rel="stylesheet" href="css/styles.css")
-    link(rel="shortcut icon" href="img/EDteam-favicon.png")
+    link(rel="stylesheet" href="/assets/css/styles.css")
+    link(rel="shortcut icon" href="/assets/img/EDteam-favicon.png")
     link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,400i,700|Open+Sans:700")
+    script.
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '2018451688433635');
+        fbq('track', 'PageView');
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-29043603-3"></script>
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-29043603-3');
+
   body
     include ../includes/header
     block main
     include ../includes/footer
-    script(src="js/scripts-min.js")
+    script(src="/assets/js/scripts-min.js")
     script.
       window.intercomSettings = {
         app_id: "rx8wzzsg"
       }
     script.
       (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/rx8wzzsg';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
+    script.
+        fbq('track', 'ViewContent');

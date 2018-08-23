@@ -1,0 +1,2 @@
+Hace 6 años conocí Drupal y su gran comunidad. Estoy convencido de que las comunidades de desarrollo son una de las mejores formas de crecer en nuestra área. He tenido la suerte de trabajar en proyectos de todo tipo y he conocido todas las etapas del desarrollo de un producto, desde la negociación, planificación, desarrollo, testing y hasta comercialización. Lo que me dio una visión amplia de cómo suceden las cosas detrás de cada proyecto. Actualmente soy Director de Operaciones (COO) y docente de EDteam.
+

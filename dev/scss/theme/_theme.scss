@@ -12,26 +12,15 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: $secondColor;
+    background: #f6f6f6;
     transform: skewY(-1.5deg);
-    opacity : .075;
+    //opacity : .075;
+    border : 1px solid $borderColor;
   }
 
   &.left {
     &::before {
       transform: skewY(1.5deg)
-    }
-  }
-
-  &.third {
-    &::before {
-      background : $thirdColor;
-    }
-  }
-
-  &.accent {
-    &::before {
-      background : $accentColor;
     }
   }
 }

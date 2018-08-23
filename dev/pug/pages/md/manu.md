@@ -1,0 +1,1 @@
+Arquitecto Senior de Soluciones en la nube encargado de diseñar e implementar arquitecturas de alta disponibilidad, tolerantes a fallos para plataformas de diferentes tipos. Arquitecto de AWS Certificado en nivel Asociado y Profesional. Apasionado de las tecnologias open source y del desarrollo web.

@@ -1,0 +1,10 @@
+mixin userProfile(name,avatar,countryCode, country,bio)
+  .user.user--profile
+    .user__avatar
+      img(src=`/assets/img/${avatar}`)
+    .user__data
+      .t2.user__name=name
+      .user__country
+        img(src=`/assets/img/icon-flag-${countryCode}.svg`).user__flag
+        .small=country
+      .user__bio!=bio

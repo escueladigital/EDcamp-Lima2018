@@ -1,0 +1,1 @@
+Especialista en diseño web con 8 años de experiencia. He trabajado en más de 100 proyectos y dictado charlas y conferencias en 5 universidades y 3 países. Soy fundador y Director General (CEO) de EDteam.

@@ -1,28 +1,28 @@
-extends ../config/template
+extends ../../config/template
 append config
   -pageTitle = 'Workshops - EDcamp Lima 2018'
   -pageDescription = 'Talleres con los expertos de EDteam en los que se crea un proyecto o se resuelve una necesidad de tu emprendimiento, de tus clientes o para tu trabajo diario.'
   -pageImage = '/img/workshops.jpg'
 
 block main
-  +banner('dark','banner-dia-2.jpg','1 de setiembre - Workshops', 'Talleres de programación, diseño web, emprendimiento y finanzas con el equipo de EDteam')
+  +banner('third','banner-alexys.jpg','Workshops', 'Talleres de programación, diseño web, emprendimiento y finanzas con el equipo de EDteam')
 
   .ed-grid
     p.l-60.to-center.center.l-section Los workshops son talleres completamente prácticos con el staff de expertos de EDteam. En cada workshop se crea un proyecto o se resuelve una necesidad específica de tu emprendimiento, de tus clientes o para tu trabajo diario.
 
-  section.l-section.diagonal-section
+  section.l-section.diagonal-section#programacion
     .ed-grid.cols-l-12.diagonal-section__content
       h2.t1.center.span-l-12.section-title Programación
       p.subtitle.span-l-12.l-60.to-center.center.l-block.small Cada workshop durá 50 minutos con intermedios de 15 minutos. El almuerzo dura 1:30min. Al finalizar el dia se hará un panel de preguntas con todos los profesores.
       div.span-l-2
       div.home-users.span-l-9
         // Registro y entrada
-        .talk-break.l-section
+        .talk-break.l-section#registro
           .talk__hour 8:30am <br> 9:00am
           span Registro y entrada
 
         // Workshop 1 - Alexys
-        .talk.l-section
+        .talk.l-section#alexys
           .talk__hour 9:00am <span>-</span> 9:50am
           .talk__speaker
             +user('Alexys Lozada','alexys.jpg','co', 'Colombia')
@@ -31,7 +31,7 @@ block main
             p Veremos cómo se realiza el testing y el benchmarking (pruebas y rendimiento) de las aplicaciones utilizando el lenguaje de programación Go.
 
         // Workshop 2 - Beto
-        .talk.l-section
+        .talk.l-section#beto
           .talk__hour 10:05am <span>-</span> 10:55am
           .talk__speaker
             +user('Beto Quiroga','beto.jpg','bo', 'Bolivia')
@@ -40,7 +40,7 @@ block main
             p Desarrollaremos el mismo proyecto con 3 diferentes frameworks (Angular, Vue, React) y analizaremos las bondades y desventajas de cada uno frente a diversas situaciones.
 
         // Workshop 3 - Freddy
-        .talk.l-section
+        .talk.l-section#freddy
           .talk__hour 11:10am <span>-</span> 12:00pm
           .talk__speaker
             +user('Freddy Cahuas','freddy.jpg','pe', 'Perú')
@@ -49,7 +49,7 @@ block main
             p ¿Por qué usamos las metodologías ágiles para los proyectos? ¿Por qué hacemos lo que hacemos? No se trata de parecer agil, se trata de ser agil.
 
         // Workshop 4 - Harold
-        .talk.l-section
+        .talk.l-section#harold
           .talk__hour 12:15pm <span>-</span> 1:05pm
           .talk__speaker
             +user('Harold Pajuelo','harold.jpg','pe', 'Perú')
@@ -58,12 +58,12 @@ block main
             p Aprenderemos desde una perspectiva contable, como definir los costos de un proyecto y presentar una cotización a un cliente. Harold es Gerente de Finanzas de EDteam.
 
         // Coffe break
-        .talk-break.l-section.second
+        .talk-break.l-section.second#almuerzo
           .talk__hour 1:05pm <br> 2:35pm
           span Almuerzo
 
         // Workshop 5 - Mircha
-        .talk.l-section
+        .talk.l-section#jon
           .talk__hour 2:35pm <span>-</span> 3:25pm
           .talk__speaker
             +user('Jon MirCha','mircha.jpg','mx', 'México')
@@ -72,7 +72,7 @@ block main
             p Aprenderás las metodologías y prácticas de frameworks y librerías modernas orientados a componentes (React, Vue, Angular) con las tecnologías de siempre (HTML, JS y PHP).
 
         // Workshop 6 - Alvaro
-        .talk.l-section
+        .talk.l-section#alvaro
           .talk__hour 3:40pm <span>-</span> 4:30pm
           .talk__speaker
             +user('Álvaro Felipe','alvaro.jpg','pe', 'Perú')
@@ -81,7 +81,7 @@ block main
             p Las páginas estáticas tienen más fuerza que nunca (para informar proyectos o campañas de marketing) y son muy fáciles de desarrollar.
 
         // Workshop 7 - Manu
-        .talk.l-section
+        .talk.l-section#manu
           .talk__hour 4:45pm <span>-</span> 5:35pm
           .talk__speaker
             +user('Manu Rodriguez','manu.jpg','pe', 'Perú')
@@ -90,11 +90,11 @@ block main
             p Revisaremos la variedad de soluciones como servicio ofrecidas por Amazon Web Services y aprenderemos a desplegar un sitio web escalable y un sitio web sin servidores (serverless).
 
         // Premiación
-        .talk-break.l-section.third
+        .talk-break.l-section.third#panel
           .talk__hour 5:35pm <br> 6:30pm
           span Panel de preguntas
 
-  section.l-section
+  section.l-section#donde
     .ed-grid.cols-l-12
       div
       .span-l-3
@@ -103,13 +103,13 @@ block main
         a.button--ghost--alert.button--tiny(href="https://www.google.com/maps/place/Edificio+El+Almirante/@-12.081983,-77.0336556,17z/data=!4m12!1m6!3m5!1s0x9105c8f4cd007a37:0x1e0400e44d1a3f1e!2sEdificio+El+Almirante!8m2!3d-12.0819759!4d-77.0335961!3m4!1s0x9105c8f4cd007a37:0x1e0400e44d1a3f1e!8m2!3d-12.0819759!4d-77.0335961" target="_blank") Ver en Google Maps
         p Verificaremos tu inscripción en puerta. El ingreso inicia a las 8:30am.
       .span-l-7
-        img(src="img/mapa-dia-2.png")
-  section.l-section.diagonal-section.left.third
+        img(src="/assets/img/mapa-dia-2.png")
+  section.l-section.diagonal-section.left.third#inscripciones
     .ed-grid.cols-l-12.diagonal-section__content
       h2.t1.center.span-l-12.section-title Inscripciones
       div
       .span-l-5.l-block
-        +suscriptionCard('workshops', 'Workshops', 'Sábado 1 de setiembre (9am - 7pm)', '300', '270','* Acceso gratuito al taller de emprendimiento', 'cta', '89')
+        +suscriptionCard('workshops','workshops', 'Workshops', 'Sábado 1 de setiembre (9am - 7pm)', '300', '270','* Acceso gratuito al taller de emprendimiento', 'cta', 'https://app.ed.team/?compra=89')
       .span-l-5.l-block
         h3 Tu inscripción incluye
         ul.edcamp-features.small
@@ -126,6 +126,6 @@ block main
           li Descuentos en cursos y suscripciones a EDteam
           li Acceso a materiales, código y grabaciones de los talleres DE POR VIDA en la App de EDteam
 
-  section.l-section
-    include ../includes/faq
+  section.l-section#faq
+    include ../../includes/faq
 

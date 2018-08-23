@@ -5,7 +5,7 @@
 
 .main-banner {
     @include from(l) {
-        padding-top: 8rem;
+        padding-top: 7rem;
         padding-bottom: 9rem;
     }
 }
@@ -58,8 +58,16 @@
 }
 
 // banner
+.main-banner--second {
+  --color: var(--second-color);
+}
+
 .main-banner--third {
   --color: var(--third-color);
+}
+
+.main-banner--accent {
+  --color: var(--accent-color);
 }
 
 .main-banner--dark {
@@ -97,13 +105,15 @@
 // A guia de estilos
 
 @each $bp, $size in $breakpoints {
-  @each $align in left, center, right {
-    @if $bp == s {
+  @if $bp == s {
+    @each $align in left, center, right {
       .#{$align} {
         text-align : $align;
       }
-    } @else {
-      @include from($bp) {
+    }
+  } @else {
+    @include from($bp) {
+      @each $align in left, center, right {
         .#{$bp}-#{$align} {
           text-align : $align;
         }

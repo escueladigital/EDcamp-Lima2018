@@ -54,3 +54,11 @@
     }
   }
 }
+
+// Ocultar simbolo de soles en dia gratis
+.card--tde  [class*=button] {
+  font-size : 0;
+  span {
+    font-size : 1.25rem;
+  }
+}

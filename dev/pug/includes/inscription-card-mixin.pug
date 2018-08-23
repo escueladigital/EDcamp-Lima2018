@@ -1,11 +1,11 @@
-mixin suscriptionCard(image,title,subtitle,price,priceFinal,message,button,id)
-  .card.card--mini-horizontal.card--subscription
+mixin suscriptionCard(className,image,title,subtitle,price,priceFinal,message,button,target)
+  .card.card--mini-horizontal.card--subscription(class=`card--${className}`)
     .card__img
-      img(src="img/card__img-"+image+".jpg")
+      img(src="/assets/img/card__img-"+image+".jpg")
     .card__content
       .card__title= title
       .card__subtitle=subtitle
-      a(class="button--"+button href="https://app.ed.team/?compra="+id)
+      a(class="button--"+button href=target)
         | S/
         del=price
         span=priceFinal

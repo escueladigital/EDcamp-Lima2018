@@ -1,0 +1,21 @@
+extends ../../config/template
+append config
+  -pageTitle = 'Expositores nacionales e internacionales - EDcamp Lima 2018'
+  -pageDescription = '¿Quieres saber qué debe tener tu emprendimiento para ser sostenible? ¿Cómo hizo EDteam para superar el valle de la muerte y estar en el top 3 de la educación online en español sin inversionistas?'
+  -pageImage = '/img/tde.jpg'
+
+block main
+  +banner('accent','banner-expositores.jpg','Expositores', 'El staff de EDteam completo por primera vez en Lima')
+
+  .ed-grid
+    p.l-60.to-center.center.l-section Comparte dos días con el staff de EDteam, expertos en tecnología con amplio reconocimiento en toda Latinoamerica, con experiencia en proyectos para todo el mundo y todo tamaño de empresas.
+
+  section.l-section.diagonal-section#programacion
+    .ed-grid.cols-l-12.diagonal-section__content
+      div.span-l-2
+      div.home-users.span-l-8
+        include ../../includes/expositores
+
+  section.l-section
+    include ../../includes/faq
+
