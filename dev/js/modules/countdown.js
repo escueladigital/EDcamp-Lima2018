@@ -47,7 +47,7 @@ countdown.getRemainingTime =  (deadline) => {
 countdown.run = (deadline, elem, message) => {
   let timerUpdate = setInterval(function () {
     let el = document.getElementById(elem),
-      t = timer.getRemainingTime(deadline);
+      t = countdown.getRemainingTime(deadline);
     el.innerHTML = `
       <div class="next-lesson__remain">
         <span>${t.remainDays}</span>D:
