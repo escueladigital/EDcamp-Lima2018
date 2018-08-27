@@ -121,3 +121,14 @@
     }
   }
 }
+
+[class*=topbar] {
+  @include from(l) {
+    .ed-item {
+      height : 3rem;
+    }
+  }
+  [class*=button]{
+    margin : 0 0 0 .5rem;
+  }
+}

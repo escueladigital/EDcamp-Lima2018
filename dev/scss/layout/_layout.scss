@@ -1,12 +1,20 @@
 .main-header {
     @include from(l) {
-        height: 4rem;
+        height: var(--header-height);
     }
 }
 
-.main-header + .l-section {
-  @include to(l) {
-    margin-top : 3rem;
+
+@include from(l) {
+  :root {
+    --header-height: 4rem;
+  }
+}
+
+.main-header {
+  + .l-section,
+  + [class*=topbar]{
+    margin-top : var(--header-height) !important;
   }
 }
 
