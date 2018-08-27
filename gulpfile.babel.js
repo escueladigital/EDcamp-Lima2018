@@ -42,7 +42,7 @@ const sassOptions = env == 'dev' ? {
 }
 
 gulp.task('styles', () => {
-  return env == 'dev' 
+  return env === 'dev'
     ? gulp.src('./dev/scss/styles.scss')
       .pipe(plumber())
       .pipe(sass(sassOptions))
@@ -60,7 +60,8 @@ gulp.task('pug', () =>
   gulp.src('./dev/pug/pages/**/*.pug')
     .pipe(plumber())
     .pipe(pug({
-      pretty: !production
+      pretty: !production,
+      basedir: './dev/pug'
     }))
     .pipe(gulp.dest('./public'))
 )
