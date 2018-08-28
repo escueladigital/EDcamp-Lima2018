@@ -12,4 +12,4 @@ registerServiceWorker()
 scrollTarget()
 
 
-countdown.run('Mon Aug 27 2018 23:59:59 GMT-0500', 'clock', 'El descuento ha terminado')
+countdown.run('Aug 31 2018 14:00:00 GMT-0500', 'clock', '¡Ya empezó!')
