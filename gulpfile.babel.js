@@ -110,7 +110,16 @@ gulp.task('sitemap', () => {
     .pipe(gulp.dest('./public'))
 })
 
-gulp.task('default', ['styles', 'pug', 'images','scripts'], () => {
+ gulp.task('manifest', () => {
+   gulp.src('./dev/manifest.json')
+   .pipe(gulp.dest('./public'))
+ })
+
+ gulp.task('worker', () => {
+   gulp.src('./dev/service-worker.js').pipe(gulp.dest('./public'))
+ })
+
+gulp.task('default', ['styles', 'pug', 'images','scripts', 'manifest', 'worker'], () => {
   server.init({
     server: {
       baseDir: './public'
@@ -121,4 +130,6 @@ gulp.task('default', ['styles', 'pug', 'images','scripts'], () => {
   watch('./dev/js/**/**', () => gulp.start('scripts',server.reload) )
   watch('./dev/pug/**/**', () => gulp.start('pug', server.reload))
   watch('./dev/img/**/**', () => gulp.start('images'))
+  watch('./dev/manifest.json', () => gulp.start('manifest'))
+  watch('./dev/service-worker.js', () => gulp.start('worker'))
 });
