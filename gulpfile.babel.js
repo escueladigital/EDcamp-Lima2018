@@ -33,7 +33,7 @@ const postcssPlugins = [
   })
 ]
 
-const sassOptions = env == 'dev' ? {
+const sassOptions = env === 'dev' ? {
   includePaths: ['node_modules'],
   sourceComments: true,
   outputStyle: 'expanded'
